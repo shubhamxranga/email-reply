@@ -4,6 +4,14 @@ This is an end-to-end system built for the Hiver Open Challenge. It takes incomi
 
 ---
 
+### How It Was Built
+
+The dataset was generated using structured, category-specific prompts (matching the logic in `data/generate_dataset.py`) to ensure high quality and variation. The raw outputs were then collected and saved directly into `data/dataset.json`. 
+
+The `data/generate_dataset.py` script is included in this repository as a utility to programmatically reproduce or scale the dataset generation process.
+
+---
+
 ## Quick Start
 
 ### Setup
