@@ -44,13 +44,27 @@ def cmd_generate_responses(args):
     with open("data/dataset.json") as f:
         full_dataset = json.load(f)
 
-    total = len(full_dataset)
-    split_idx = int(total * (1 - args.test_split))
+    # Stratified split: take test_split% from EACH category
+    # so the test set covers all categories, not just the last ones
+    import random
+    random.seed(42)  # Reproducible split
 
-    train_data = full_dataset[:split_idx]
-    test_data = full_dataset[split_idx:]
+    categories = {}
+    for item in full_dataset:
+        cat = item["category"]
+        if cat not in categories:
+            categories[cat] = []
+        categories[cat].append(item)
 
-    print(f"  Dataset: {total} total emails")
+    train_data = []
+    test_data = []
+    for cat, items in sorted(categories.items()):
+        random.shuffle(items)
+        split_idx = int(len(items) * (1 - args.test_split))
+        train_data.extend(items[:split_idx])
+        test_data.extend(items[split_idx:])
+
+    print(f"  Dataset: {len(full_dataset)} total emails")
     print(f"  Train (retrieval corpus): {len(train_data)}")
     print(f"  Test (generate + evaluate): {len(test_data)}")
 
@@ -112,8 +126,20 @@ def cmd_evaluate(args):
     with open("data/dataset.json") as f:
         full_dataset = json.load(f)
 
-    split_idx = int(len(full_dataset) * (1 - args.test_split))
-    train_data = full_dataset[:split_idx]
+    # Use same stratified split as generation
+    import random
+    random.seed(42)
+    categories = {}
+    for item in full_dataset:
+        cat = item["category"]
+        if cat not in categories:
+            categories[cat] = []
+        categories[cat].append(item)
+    train_data = []
+    for cat, items in sorted(categories.items()):
+        random.shuffle(items)
+        split_idx = int(len(items) * (1 - args.test_split))
+        train_data.extend(items[:split_idx])
 
     retriever = EmailRetriever(dataset=train_data)
     evaluator = EmailEvaluator(retriever)

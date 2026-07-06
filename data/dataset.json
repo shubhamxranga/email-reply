@@ -1,1 +1,602 @@
-[]
+[
+  {
+    "id": "billing_01",
+    "category": "billing",
+    "incoming_email": "Subject: Unexpected charge after trial\n\nHi CollabMail team,\n\nWe signed up for the Growth trial for our 12-person startup and I just saw a $348 charge on our Amex ending in 1882. I thought the trial ended next Friday, and we only created one shared inbox for support@acmeforms.com plus a few email templates.\n\nCan you explain what happened and refund the charge if this was early?",
+    "expected_reply": "Hi Maya,\n\nThanks for reaching out, and I understand why that charge was surprising.\n\nI checked your workspace and the trial began on May 27 and ended on June 10 at 11:59 PM UTC. Because billing was enabled on the Growth plan for 12 seats at $29 per seat, the card on file was charged $348 on June 11. Your shared inbox, assignment rules, analytics dashboard, and email templates all remained active after the trial converted.\n\nIf you did not intend to continue, you can cancel from collabmail.com/billing, and I can submit a refund request for the unused term. Please confirm whether you want us to cancel the subscription immediately or keep the workspace active through the current billing period. Once you confirm, we will process the refund review within 3 business days."
+  },
+  {
+    "id": "billing_02",
+    "category": "billing",
+    "incoming_email": "Subject: Need invoice for March subscription\n\nHello,\n\nCould you send the paid invoice for our March CollabMail subscription? Finance needs it for PO CM-4471. We use the Pro plan for support@ and sales@.\n\nThanks,\nDerek",
+    "expected_reply": "Hi Derek,\n\nAbsolutely. The March invoice for PO CM-4471 is available from your billing portal at collabmail.com/billing/invoices. It covers your Pro plan for the support@ and sales@ shared inboxes from March 1 through March 31 and shows the card payment of $870.\n\nI have also sent a PDF copy to the billing contact on your workspace. If you need the invoice reissued with a different legal entity, VAT ID, or billing address, send me the exact details and I can update the billing profile before generating a revised copy."
+  },
+  {
+    "id": "billing_03",
+    "category": "billing",
+    "incoming_email": "Subject: Downgrade and prorated credit question\n\nHi team,\n\nWe are moving from 42 users to 28 users after a team restructure. If we downgrade from Business to Pro today, what happens to the extra seats and the advanced analytics dashboard we currently use for response-time reporting?\n\nAlso, do we get a prorated credit?",
+    "expected_reply": "Hi Priya,\n\nThanks for the context. If you downgrade from Business to Pro today, the 14 removed seats stop renewing immediately, and any users above your new seat count will need to be deactivated before the downgrade can complete. Pro still includes shared inboxes, assignments, collision detection, and email templates, but advanced analytics reports such as SLA trends and response-time breakdowns are Business-only.\n\nFor billing, you will receive a prorated credit for the unused portion of the 14 Business seats and the Business-to-Pro plan difference. Based on your renewal date of July 31, the estimated credit is $612.40 and it will apply automatically to your next invoice.\n\nYou can start the change at collabmail.com/billing/change-plan. If you want, send us the names of the 14 seats to remove and we can help review the account before you downgrade."
+  },
+  {
+    "id": "billing_04",
+    "category": "billing",
+    "incoming_email": "Subject: Payment failed but card is valid\n\nHey, our shared inbox stopped letting us add assignment rules this morning and it says payment failed. The Visa ending 9021 is valid and has plenty of limit. Can you check ASAP? Our support queue is busy.",
+    "expected_reply": "Hi Jordan,\n\nI'm sorry for the disruption, especially during a busy support queue.\n\nThe payment attempt for $1,160 failed at 8:12 AM UTC with a bank response of \"authentication required.\" This usually means the issuer needs 3D Secure confirmation, even when the card is valid. Your existing shared inboxes and assignments will continue working during the 7-day grace period, but adding new assignment rules is temporarily paused until payment is completed.\n\nPlease visit collabmail.com/billing/payment and click Retry payment. That will prompt the bank authentication step. If the retry still fails, you can add a different payment method or send us a bank transfer request and we'll extend the grace period while finance processes it."
+  },
+  {
+    "id": "billing_05",
+    "category": "billing",
+    "incoming_email": "Subject: Enterprise pricing for 600 seats\n\nHi CollabMail,\n\nWe are evaluating CollabMail for our global customer operations team. We would need roughly 600 seats, 38 shared inboxes, SSO, audit logs, custom retention, Salesforce integration, and quarterly business reviews.\n\nCan you share enterprise pricing and whether billing can be annual by invoice?",
+    "expected_reply": "Hi Elena,\n\nThanks for considering CollabMail for your global operations team. For a 600-seat deployment with 38 shared inboxes, SSO, audit logs, custom retention, Salesforce integration, and QBRs, you would be best matched with our Enterprise plan.\n\nEnterprise pricing is quoted based on seat volume, support tier, security requirements, and contract term. Annual invoicing is supported, including purchase orders, net-30 terms after approval, and consolidated billing across departments.\n\nThe next step is a 30-minute pricing and security review with our sales engineering team. You can choose a time at collabmail.com/enterprise-demo, or send us your preferred availability and we'll coordinate. After that call, we can provide a formal quote within 1 business day."
+  },
+  {
+    "id": "billing_06",
+    "category": "billing",
+    "incoming_email": "Subject: Cancel subscription but keep data\n\nHi,\n\nWe need to cancel our CollabMail subscription because we are consolidating tools. Please cancel before the July 15 renewal. We still need access to export shared inbox history and analytics for support@novalink.io.\n\nWhat happens to our data after cancellation?",
+    "expected_reply": "Hi Amir,\n\nI can help with that. Your next renewal is July 15, so canceling before then will stop any new subscription charge. You can cancel from collabmail.com/billing/cancel, or I can send the request to the workspace owner for confirmation.\n\nAfter cancellation, your team will keep read-only access for 30 days. During that period, you can export conversation history, assignment activity, email templates, and analytics reports for support@novalink.io from collabmail.com/settings/export. After 30 days, the workspace is queued for deletion according to our retention policy unless you request an extension.\n\nPlease have the workspace owner confirm the cancellation request, and we'll make sure the subscription does not renew on July 15."
+  },
+  {
+    "id": "billing_07",
+    "category": "billing",
+    "incoming_email": "Subject: We were charged for inactive users\n\nHi support,\n\nOur June invoice includes 33 users, but only 29 people are active in CollabMail. Four people left the company in May and no longer access support@ or sales@. Why were we billed for them?",
+    "expected_reply": "Hi Lena,\n\nThanks for flagging this. CollabMail bills for provisioned seats, not only users who actively log in during the month. I checked your workspace and the four former employees were suspended in Google Workspace but were still listed as active CollabMail seats until June 18.\n\nI've removed those four seats from future billing. Because they were not using the shared inboxes after May 31, I can apply a goodwill credit of $116 for the June seat charges to your next invoice.\n\nTo avoid this later, we recommend enabling seat sync at collabmail.com/settings/team so suspended Google users are automatically removed from CollabMail after 24 hours."
+  },
+  {
+    "id": "billing_08",
+    "category": "billing",
+    "incoming_email": "Subject: Confused about upgrade charge\n\nHi there,\n\nI upgraded our account yesterday so we could use the analytics dashboard. The receipt says $214.77 instead of the $49 per user price shown on your site. Is this a mistake?",
+    "expected_reply": "Hi Ben,\n\nHappy to clarify. The $49 per user price is the monthly Business plan rate. Your receipt shows $214.77 because you upgraded 7 users from Pro to Business halfway through your billing cycle, so the charge is only the prorated difference for the remaining 19 days.\n\nYour next full monthly renewal will be $343 for 7 Business users, plus any taxes listed in your billing profile. You can review the proration details at collabmail.com/billing/invoices by opening the invoice line called \"Plan upgrade adjustment.\"\n\nNothing looks incorrect on our side, but let us know if you want us to send a line-item breakdown for your accounting team."
+  },
+  {
+    "id": "billing_09",
+    "category": "billing",
+    "incoming_email": "Subject: Refund request - wrong workspace upgraded\n\nHi CollabMail,\n\nI accidentally upgraded our test workspace instead of our production workspace. The test workspace is collabmail-test.brightledger.com and was charged $588 today. We have not used any shared inboxes there except one sample support@ inbox.\n\nCan you refund it and move the plan to our production workspace?",
+    "expected_reply": "Hi Naomi,\n\nThanks for explaining what happened. I can see that collabmail-test.brightledger.com was upgraded today for 12 Business seats at $49 per seat, totaling $588, and that only the sample support@ shared inbox has activity.\n\nWe can refund the test workspace charge and help you upgrade the production workspace instead. For security, please have an owner on both workspaces confirm the request from their CollabMail login email. Once confirmed, we'll cancel the test workspace upgrade, process the refund within 5 to 10 business days depending on the card issuer, and send a clean upgrade link for production.\n\nPlease reply with the production workspace URL and owner email so we can line this up correctly."
+  },
+  {
+    "id": "billing_10",
+    "category": "billing",
+    "incoming_email": "Subject: Can we pause billing for seasonal team?\n\nHello,\n\nWe run a seasonal admissions team and only use CollabMail heavily from August through November. Is there a way to pause billing for 18 agents while keeping our email templates and assignment rules intact?",
+    "expected_reply": "Hi Victor,\n\nYes, you can reduce seats during the off-season while keeping your workspace configuration. If you deactivate the 18 seasonal agents, their seat charges stop at the next renewal, and your shared inboxes, email templates, tags, and assignment rules remain saved.\n\nWhen those agents return, you can reactivate them from collabmail.com/settings/team. Any prorated charges for reactivation will be calculated from the date they are added back through the end of the billing cycle.\n\nIf you want to keep their user profiles but prevent charges, export a team list first, deactivate the seasonal users, and add a note to your billing calendar before August. We can also review your workspace before the next renewal if you send us the date you want the change to take effect."
+  },
+  {
+    "id": "billing_11",
+    "category": "billing",
+    "incoming_email": "Subject: Tax exemption on invoice\n\nHi,\n\nOur nonprofit is tax exempt in New York, but our latest invoice includes $78.21 in sales tax. Can you update this and reissue the invoice? Our account uses three shared inboxes for donor support.",
+    "expected_reply": "Hi Rachel,\n\nThanks for reaching out. We can review and update your tax status once we have your exemption certificate on file.\n\nPlease upload the certificate at collabmail.com/billing/tax or reply with the PDF attached. After our billing team verifies it, we'll update your account, void and reissue the latest invoice if eligible, and remove applicable tax from future invoices.\n\nVerification usually takes 1 to 2 business days. Your three shared inboxes and donor support workflows will not be affected while we update the billing profile."
+  },
+  {
+    "id": "billing_12",
+    "category": "billing",
+    "incoming_email": "Subject: Need monthly billing instead of annual\n\nHi CollabMail billing,\n\nWe selected annual billing during setup, but our finance lead wants month-to-month until procurement approves the larger rollout. Can we switch our 25-seat Business plan to monthly? We just started 4 days ago.",
+    "expected_reply": "Hi Sam,\n\nYes, since your annual subscription started only 4 days ago, we can switch your 25-seat Business plan to monthly billing. The monthly Business rate is $49 per user, so your next monthly invoice would be $1,225 before tax.\n\nWe'll calculate the unused annual amount and apply it as a credit, then future invoices will renew monthly. Your shared inboxes, analytics dashboard, assignment rules, and templates will stay exactly as they are.\n\nPlease have the workspace owner confirm the billing-frequency change. Once confirmed, our billing team will adjust the subscription and email the revised invoice within 1 business day."
+  },
+  {
+    "id": "billing_13",
+    "category": "billing",
+    "incoming_email": "Subject: Invoice should show department split\n\nHi team,\n\nOur company uses CollabMail across Support, Sales, and Operations. Can invoices show costs split by shared inbox or department? Finance wants to allocate support@, sales@, and ops@ separately.",
+    "expected_reply": "Hi Hannah,\n\nCollabMail invoices currently show charges at the workspace and seat level, not by shared inbox. However, you can add department labels to users and export a seat report from collabmail.com/billing/usage that finance can use for cost allocation.\n\nFor your setup, we recommend assigning users to Support, Sales, and Operations groups, then exporting the monthly usage report. It will include user name, email, role, assigned department, and plan. You can pair that with your invoice to allocate the total subscription cost across support@, sales@, and ops@.\n\nIf you are on Enterprise, we can also discuss separate department workspaces with consolidated billing."
+  },
+  {
+    "id": "billing_14",
+    "category": "billing",
+    "incoming_email": "Subject: Urgent: account locked over failed invoice\n\nOur account says billing overdue and my team can't access the analytics dashboard. The invoice is only 2 days late because our AP system changed. Can you unlock us while we update the payment method?",
+    "expected_reply": "Hi Marcus,\n\nI'm sorry for the stress this is causing. Your account is not fully locked, but Business-only features such as advanced analytics can be restricted when an invoice remains unpaid after the grace-period warning.\n\nI've added a 5-day courtesy extension so your team can access the analytics dashboard while AP updates the payment method. Please update payment details at collabmail.com/billing/payment or request an invoice payment link from that page.\n\nOnce payment is completed, all billing banners will clear automatically. If AP needs vendor forms or a W-9, reply here and we'll send them right away."
+  },
+  {
+    "id": "billing_15",
+    "category": "billing",
+    "incoming_email": "Subject: Delete card from account\n\nHi, we are moving to invoice billing and need to remove the company card ending in 4430. I don't see a delete button in billing settings.",
+    "expected_reply": "Hi Olivia,\n\nFor accounts with an active self-serve subscription, CollabMail requires one payment method on file unless invoice billing has already been approved. That is why you do not see a delete option for the card ending in 4430.\n\nIf your team is moving to invoice billing, please submit the request at collabmail.com/billing/invoice-billing with your billing address, tax details, PO requirements, and preferred payment terms. Once approved, we can remove the card and switch future renewals to invoice.\n\nIf you need to replace the card immediately, you can add the new method first, set it as default, and then remove the old card from the same billing page."
+  },
+  {
+    "id": "billing_16",
+    "category": "billing",
+    "incoming_email": "Subject: Why did renewal increase?\n\nHello,\n\nOur renewal went from $2,088 last year to $2,940 this year. We did add a few users, but this seems like a big jump. Can you break down the difference?",
+    "expected_reply": "Hi Thomas,\n\nI reviewed the renewal and can break it down. Last year your annual Pro plan covered 6 users at $29 per user per month, billed annually for $2,088. This year the renewal includes 8 users on Pro, which brings the annual subscription to $2,784, plus $156 in applicable taxes, for a total of $2,940.\n\nThe increase is from the two additional seats and the tax line now required for your billing address. Your shared inboxes, email templates, and basic analytics are still included in the Pro plan.\n\nYou can download the detailed renewal invoice at collabmail.com/billing/invoices. If any of the 8 users should be removed before renewal, send us their emails and we'll help adjust the invoice."
+  },
+  {
+    "id": "billing_17",
+    "category": "billing",
+    "incoming_email": "Subject: Refund for accidental annual renewal\n\nHi,\n\nWe meant to cancel but missed the renewal reminder. The annual charge of $5,880 posted this morning. We have moved our support team to another platform and have not used CollabMail since June 1.\n\nCan you refund the renewal?",
+    "expected_reply": "Hi Grace,\n\nThanks for letting us know. I understand missing a renewal reminder can be frustrating, especially after your team has already moved platforms.\n\nYour annual renewal for 10 Business seats posted this morning for $5,880. Because the renewal occurred today and there has been no shared inbox activity since June 1, we can submit this for a full refund exception once the workspace owner confirms cancellation.\n\nPlease have the owner reply confirming that you want the subscription canceled immediately. After confirmation, we'll cancel the renewal, process the refund to the original payment method, and keep the workspace in read-only mode for 30 days so you can export any remaining analytics or templates."
+  },
+  {
+    "id": "billing_18",
+    "category": "billing",
+    "incoming_email": "Subject: Can coupon apply retroactively?\n\nHi CollabMail,\n\nOur sales rep gave us code STARTUP20, but I forgot to enter it before paying for the first month. The invoice was $435 for 15 Pro users. Can the discount be applied retroactively?",
+    "expected_reply": "Hi Ishaan,\n\nYes, we can help with that. STARTUP20 gives 20% off the first 3 months for eligible startup workspaces. Since your first invoice was just paid for 15 Pro users at $435, the retroactive discount would be $87.\n\nI can apply an $87 credit to your next invoice and attach the coupon to the remaining eligible months. Please confirm the email address of the sales rep who provided the code so we can note it on your billing record.\n\nOnce applied, you'll see the credit and future discount at collabmail.com/billing/invoices."
+  },
+  {
+    "id": "billing_19",
+    "category": "billing",
+    "incoming_email": "Subject: Add VAT number\n\nHello,\n\nPlease add our German VAT ID DE298441920 to future CollabMail invoices. Our billing email is invoices@kraftbyte.de. Can you also update last month's invoice?",
+    "expected_reply": "Hi Sofia,\n\nThanks. You can add the VAT ID directly at collabmail.com/billing/tax, or I can update it for you after verifying you are an account admin. Once DE298441920 is saved, future invoices will include it automatically.\n\nFor last month's invoice, we can reissue it with the VAT ID if the billing entity and address remain the same. Please confirm the legal company name and billing address you want shown on the invoice, and we'll generate the revised PDF within 1 business day.\n\nWe'll also make sure invoices@kraftbyte.de remains the billing recipient."
+  },
+  {
+    "id": "billing_20",
+    "category": "billing",
+    "incoming_email": "Subject: Upgrade only analytics users?\n\nHi,\n\nWe have 55 agents using shared inboxes, but only 5 managers need the advanced analytics dashboard. Do we have to upgrade everyone to Business, or can just those 5 users be Business?",
+    "expected_reply": "Hi Carla,\n\nCollabMail plans are applied at the workspace level, so all active seats in a workspace must be on the same plan. That means upgrading to Business would move all 55 users to Business, not only the 5 managers.\n\nIf advanced analytics is only needed by managers, there are two options. You can upgrade the full workspace so managers get dashboard access across all shared inboxes, or we can discuss an Enterprise arrangement with custom reporting access and volume pricing.\n\nFor 55 seats, Business would be $2,695 per month before tax at $49 per user. If you would like an Enterprise quote, we can schedule a pricing review at collabmail.com/enterprise-demo."
+  },
+  {
+    "id": "technical_01",
+    "category": "technical",
+    "incoming_email": "Subject: Shared inbox not updating in Gmail\n\nHi team,\n\nOur support@ shared inbox has not shown new messages for three agents since about 9:30 AM. The emails are visible in Gmail, but CollabMail assignments and status labels are not updating. We already refreshed the browser.",
+    "expected_reply": "Hi Nina,\n\nThanks for the details. When messages appear in Gmail but CollabMail labels and assignments do not update, the most common cause is a paused Gmail sync token for the affected users.\n\nPlease ask the three agents to open collabmail.com/settings/integrations/google and click Reconnect Gmail. After reconnecting, sync usually catches up within 5 to 10 minutes. Existing conversations, assignment rules, and internal notes will be preserved.\n\nIf the inbox still does not update after reconnecting, send us one affected message ID and the three agent emails. We can then check the sync logs for support@ and confirm whether Google is returning any rate-limit or permission errors."
+  },
+  {
+    "id": "technical_02",
+    "category": "technical",
+    "incoming_email": "Subject: Slack notifications stopped\n\nHey, Slack alerts from CollabMail stopped coming into #support-triage yesterday. Assignments still work in the shared inbox, but no one gets notified when a VIP email lands.",
+    "expected_reply": "Hi Leo,\n\nI'm sorry the alerts stopped. Since assignments are still working, this likely affects the Slack integration rather than the shared inbox rules.\n\nPlease go to collabmail.com/settings/integrations/slack and check whether #support-triage still shows as connected. If Slack recently changed channel permissions or the app was removed from the channel, click Reconnect and then invite @CollabMail back into #support-triage.\n\nAfter reconnecting, send a test notification from the same page. If the test succeeds but VIP alerts still do not fire, send us a screenshot of the notification rule and we'll review the event filter."
+  },
+  {
+    "id": "technical_03",
+    "category": "technical",
+    "incoming_email": "Subject: Salesforce sync error 403\n\nHello,\n\nWe are seeing \"Salesforce sync failed: 403 insufficient privileges\" when agents try to link CollabMail conversations to opportunities. This started after our Salesforce admin changed permission sets on Friday.",
+    "expected_reply": "Hi Anika,\n\nThe 403 error means Salesforce is rejecting the connected user's access, which fits with the permission-set change. CollabMail needs permission to read accounts, contacts, leads, opportunities, and create activities if you want emails logged from the shared inbox.\n\nPlease have your Salesforce admin review the connected user at collabmail.com/settings/integrations/salesforce and confirm that the CollabMail permission set is assigned. After updating permissions, click Reauthorize Salesforce in CollabMail so the new scopes are captured.\n\nIf the error continues, send us the Salesforce user email and an affected opportunity ID. We'll compare the API response with the permissions CollabMail is requesting."
+  },
+  {
+    "id": "technical_04",
+    "category": "technical",
+    "incoming_email": "Subject: Login loop with Google SSO\n\nHi,\n\nI'm stuck in a login loop. I click Sign in with Google, approve access, and then CollabMail sends me back to the login page. Other teammates can get in.",
+    "expected_reply": "Hi Mateo,\n\nSorry about the loop. Since other teammates can log in, this is likely specific to your user session or your Google account mapping.\n\nPlease try signing out of all Google accounts in the browser, then sign in only with the work email invited to CollabMail. You can also clear cookies for collabmail.com or try an incognito window. If your company uses SSO enforcement, make sure you are using the exact domain account listed in CollabMail, not an alias.\n\nIf that does not resolve it, send us your login email and the approximate time of the failed attempt. We'll check the authentication logs for mismatched workspace, disabled user, or SSO policy errors."
+  },
+  {
+    "id": "technical_05",
+    "category": "technical",
+    "incoming_email": "Subject: Assignment rules firing twice\n\nHi CollabMail,\n\nOur assignment rule for emails containing \"refund\" is assigning the same conversation to two agents. We expected round-robin to choose one person. This is causing duplicate replies.",
+    "expected_reply": "Hi Kim,\n\nThanks for reporting this. Duplicate assignment usually happens when two active rules match the same message, for example one rule for the word \"refund\" and another for a billing tag or shared inbox condition.\n\nPlease open collabmail.com/settings/rules and check the rule history for one affected conversation. It will show each rule that fired and the agent assigned. If two rules are active, you can add a condition such as \"only if unassigned\" to the second rule or reorder the rules so the round-robin rule stops further processing.\n\nIf you send us the conversation URL, we can review the rule history and suggest the cleanest rule setup to prevent duplicate replies."
+  },
+  {
+    "id": "technical_06",
+    "category": "technical",
+    "incoming_email": "Subject: Mobile app crashes on templates\n\nHello,\n\nThe iOS app crashes every time I open email templates from a conversation. I'm on iPhone 14, iOS 18.5, CollabMail app 4.7.2. Desktop works fine.",
+    "expected_reply": "Hi Aria,\n\nThanks for including the device and app version. We have seen a template picker crash in iOS app 4.7.2 when a workspace has templates with large inline images.\n\nPlease update to CollabMail iOS 4.7.3 from the App Store, which includes a fix for template loading. After updating, force close and reopen the app before testing the same conversation.\n\nIf it still crashes, send us the template name and whether it contains images or attachments. We can pull the crash report and check whether that specific template needs cleanup."
+  },
+  {
+    "id": "technical_07",
+    "category": "technical",
+    "incoming_email": "Subject: Zapier trigger delayed by hours\n\nHi,\n\nOur Zapier automation that creates a Jira ticket when a CollabMail conversation is tagged \"bug\" is running 2-3 hours late. Is there an outage?",
+    "expected_reply": "Hi Owen,\n\nI understand how disruptive that delay is for bug triage. There is no active CollabMail-wide outage, so we should check the Zapier connection and polling interval.\n\nIn Zapier, confirm that the Zap is enabled and review the task history for any rate-limit or authentication warnings. In CollabMail, go to collabmail.com/settings/integrations/zapier and reconnect the API key if it has not been refreshed recently.\n\nCollabMail sends tag-change events within a few minutes, but Zapier plan limits can affect how often Zaps run. If you share one delayed conversation URL and the Zap run timestamp, we can verify when the event left CollabMail."
+  },
+  {
+    "id": "technical_08",
+    "category": "technical",
+    "incoming_email": "Subject: Analytics dashboard blank\n\nHi support,\n\nThe analytics dashboard loads as a blank white page for everyone in our workspace. We need yesterday's response time report for an exec meeting in 40 minutes.",
+    "expected_reply": "Hi Danielle,\n\nI'm sorry this is happening right before your meeting. A blank analytics page across the whole workspace usually points to a browser script issue or a dashboard service error.\n\nPlease try opening collabmail.com/analytics in a private window and disable browser extensions such as ad blockers for CollabMail. While you test that, I've started checking your workspace dashboard logs.\n\nAs a workaround, an admin can export yesterday's response-time report from collabmail.com/analytics/export if the dashboard shell is unavailable. If that export also fails, reply with the date range and shared inboxes you need, and we'll generate the CSV for support@ and send it to the workspace owner."
+  },
+  {
+    "id": "technical_09",
+    "category": "technical",
+    "incoming_email": "Subject: Email replies not syncing back to thread\n\nHi,\n\nWhen agents reply from Gmail, the replies sometimes do not appear in the CollabMail conversation timeline. It happens mostly in sales@ and only for two users.",
+    "expected_reply": "Hi Farah,\n\nThanks for narrowing it down to sales@ and two users. If replies sent from Gmail do not appear in the CollabMail timeline, those users may have lost Gmail send-history permissions or are replying from an alias CollabMail does not track.\n\nPlease ask the two users to reconnect Gmail at collabmail.com/settings/integrations/google and confirm they are replying from the same email address connected to sales@. Also check that the CollabMail Gmail extension is enabled and up to date.\n\nIf the issue continues, send us one Gmail message ID for a missing reply and the user email. We'll inspect the sync event and confirm whether Gmail delivered the sent-message webhook."
+  },
+  {
+    "id": "technical_10",
+    "category": "technical",
+    "incoming_email": "Subject: Chrome extension says unauthorized\n\nHello,\n\nOur new hires installed the CollabMail Chrome extension, but it says \"Unauthorized workspace\" when they open support@ in Gmail. They were added to Google Group support-team yesterday.",
+    "expected_reply": "Hi Ethan,\n\nThe \"Unauthorized workspace\" message usually means the users have Gmail access through the Google Group but have not yet been added as CollabMail users or assigned to the shared inbox.\n\nPlease go to collabmail.com/settings/team and confirm the new hires are active users. Then open collabmail.com/settings/inboxes/support and add them to the support@ shared inbox. Group membership in Google does not automatically grant CollabMail access unless directory sync is enabled.\n\nAfter they are added, ask them to refresh Gmail or sign out and back in to the extension. If directory sync is enabled and they still do not appear, we can check the sync logs for your Google Group."
+  },
+  {
+    "id": "technical_11",
+    "category": "technical",
+    "incoming_email": "Subject: Notification emails duplicated\n\nHi CollabMail,\n\nEvery time a conversation is assigned to me, I get two identical notification emails. Browser notifications are normal. This started after we created a new escalation rule.",
+    "expected_reply": "Hi Lucia,\n\nThanks for the clue about the escalation rule. Duplicate assignment emails often happen when both a direct assignment notification and a rule-based escalation notification are enabled for the same event.\n\nPlease open collabmail.com/settings/notifications and confirm your personal assignment email setting. Then check collabmail.com/settings/rules for the new escalation rule and see whether it sends an email to assignees as an action.\n\nIf both are enabled, remove the email action from the escalation rule or change it to notify only managers. Send us the rule name if you want us to review the setup before you change it."
+  },
+  {
+    "id": "technical_12",
+    "category": "technical",
+    "incoming_email": "Subject: Slow loading shared inbox\n\nHi,\n\nOur enterprise support@ inbox takes 20-30 seconds to open in CollabMail. It has about 180,000 conversations. Search is also laggy when filtering by tags.",
+    "expected_reply": "Hi Robert,\n\nThanks for the specifics. With 180,000 conversations, slow inbox loading and tag filtering can happen if the default view is pulling a very broad result set.\n\nAs an immediate workaround, create saved views for active conversations only, such as status open, last updated within 30 days, or priority tags. You can do this at collabmail.com/inboxes/support/views. This reduces the amount of data loaded when agents open the inbox.\n\nWe can also run a backend index check for your support@ inbox. Please send the workspace URL and two examples of slow tag searches. Our technical team will review index health and confirm whether archival or index optimization is needed."
+  },
+  {
+    "id": "technical_13",
+    "category": "technical",
+    "incoming_email": "Subject: Webhook signatures failing\n\nHello,\n\nOur API endpoint started rejecting CollabMail webhooks because the X-CollabMail-Signature value no longer matches. Did you rotate signing secrets?",
+    "expected_reply": "Hi Jason,\n\nWe did not perform a platform-wide webhook signing-secret rotation. Signature mismatches usually come from using the wrong workspace secret, transforming the request body before verification, or verifying against a stale secret after someone regenerated it.\n\nPlease check collabmail.com/settings/developer/webhooks and confirm whether the secret was regenerated in your workspace audit log. Also make sure your endpoint verifies the raw request body exactly as received, before JSON parsing or whitespace changes.\n\nIf you send us the webhook ID and timestamp of a failed delivery, we can confirm which signing-secret version was used and whether the payload was retried."
+  },
+  {
+    "id": "technical_14",
+    "category": "technical",
+    "incoming_email": "Subject: Gmail labels missing after reconnect\n\nHi support,\n\nWe reconnected Gmail for support@ yesterday and now some CollabMail labels like Assigned to Mia and Pending Customer are missing in Gmail. The conversations still show correctly in CollabMail.",
+    "expected_reply": "Hi Zoe,\n\nIf the conversations look correct in CollabMail but Gmail labels are missing, the CollabMail-to-Gmail label sync may still be rebuilding after the reconnect.\n\nPlease open collabmail.com/settings/integrations/google and check the sync status for support@. If it says \"label sync in progress,\" labels can take several hours to fully repopulate on larger inboxes. You can also click Resync labels to restart the label mapping.\n\nIf the status shows complete and labels are still missing after 24 hours, send us two affected conversation URLs and the missing label names. We'll check whether the labels were deleted in Gmail or skipped during the resync."
+  },
+  {
+    "id": "technical_15",
+    "category": "technical",
+    "incoming_email": "Subject: Can't attach files to template\n\nHi,\n\nI'm trying to add a PDF to an email template, but the upload spins forever. The file is 18 MB. Is there a limit?",
+    "expected_reply": "Hi Alice,\n\nYes, CollabMail email template attachments have a 15 MB per-file limit. That is why the 18 MB PDF upload is not completing successfully.\n\nPlease compress the PDF below 15 MB or host the file in your approved drive and add a secure link inside the template. After reducing the file size, upload it again from collabmail.com/settings/templates.\n\nWe also recommend using links for frequently updated documents so agents do not accidentally send an outdated PDF from a saved template."
+  },
+  {
+    "id": "technical_16",
+    "category": "technical",
+    "incoming_email": "Subject: Microsoft Edge display bug\n\nHello,\n\nIn Microsoft Edge, the right-side customer profile panel overlaps the reply box. Chrome looks fine. We are on Windows 11 and Edge 126.",
+    "expected_reply": "Hi Greg,\n\nThanks for reporting the browser-specific layout issue. The customer profile panel should not overlap the reply box in Edge.\n\nPlease first try zooming the browser back to 100% and clearing cached site data for collabmail.com. We've seen Edge preserve older layout assets after an update. If the issue remains, send us a screenshot, your screen resolution, and whether the Salesforce customer profile integration is open in that panel.\n\nI'll also log this for our front-end team with your Edge 126 and Windows 11 details so we can reproduce and patch the layout if needed."
+  },
+  {
+    "id": "technical_17",
+    "category": "technical",
+    "incoming_email": "Subject: API rate limit errors\n\nHi CollabMail,\n\nOur reporting script pulls conversation metrics every 5 minutes and started getting 429 errors. We use the API to feed our internal BI dashboard.",
+    "expected_reply": "Hi Mei,\n\nA 429 response means your script is exceeding the API rate limit for the workspace or token. Pulling full conversation metrics every 5 minutes can hit that limit, especially on larger shared inboxes.\n\nPlease update the script to use incremental sync with the updated_after parameter and respect the Retry-After header returned with 429 responses. You can also reduce the polling frequency to every 15 minutes if the BI dashboard does not require near-real-time data.\n\nIf you are on Enterprise, we can discuss a higher API limit for your reporting use case. Send us the API token name and recent request volume from collabmail.com/settings/developer/api, and we'll recommend the right configuration."
+  },
+  {
+    "id": "technical_18",
+    "category": "technical",
+    "incoming_email": "Subject: Internal notes disappearing?\n\nHi,\n\nOne agent says her internal note disappeared from a customer conversation. We rely on notes for handoffs, so this is worrying. Can notes be deleted automatically?",
+    "expected_reply": "Hi Peter,\n\nInternal notes are not deleted automatically by CollabMail. They can be edited or deleted by users with the right permissions, and those changes appear in the conversation activity log.\n\nPlease open the affected conversation and click Activity. You should see whether the note was created, edited, deleted, or if the user wrote it on a different conversation in the thread. If you are an admin, you can also check collabmail.com/settings/audit-log for note deletion events.\n\nSend us the conversation URL and the approximate time the note was written, and we'll help trace what happened."
+  },
+  {
+    "id": "technical_19",
+    "category": "technical",
+    "incoming_email": "Subject: Status stuck on pending\n\nHello,\n\nSeveral conversations are stuck in Pending even after customers replied. Our rule should move them back to Open when a customer response arrives.",
+    "expected_reply": "Hi Vivian,\n\nThanks for reporting this. If conversations stay Pending after customer replies, the reopen rule may not be matching the reply direction or the customer response may be arriving through a forwarding path CollabMail sees as internal.\n\nPlease check collabmail.com/settings/rules for your reopen rule and confirm it uses the trigger \"customer replied\" with the action \"set status to open.\" Then open one affected conversation and review the activity timeline to see whether CollabMail classified the new message as customer or teammate.\n\nIf you send us two affected conversation URLs, we can inspect the sender classification and recommend the exact rule adjustment."
+  },
+  {
+    "id": "technical_20",
+    "category": "technical",
+    "incoming_email": "Subject: Android push notifications not working\n\nHi team,\n\nMy Android app no longer sends push notifications for mentions. Email notifications still arrive. I checked Android settings and notifications are allowed.",
+    "expected_reply": "Hi Noor,\n\nThanks for checking the Android notification setting already. Since email notifications still arrive, your mention settings are likely correct and the issue is probably the mobile push token.\n\nPlease open the CollabMail Android app, go to Settings, sign out, then sign back in. That refreshes the device push token. Also confirm you are on the latest app version from Google Play and that battery optimization is not restricting CollabMail in Android settings.\n\nIf push notifications still do not work, send us your device model, Android version, and the time of a recent mention. We'll check whether the push event was generated and delivered to Google Firebase."
+  },
+  {
+    "id": "feature_request_01",
+    "category": "feature_request",
+    "incoming_email": "Subject: Request: recurring assignment schedules\n\nHi CollabMail team,\n\nWe would love the ability to schedule assignment rules by day of week. Our support@ inbox has a weekend rotation, and right now we manually change the rule every Friday afternoon.",
+    "expected_reply": "Hi Tessa,\n\nThanks for the suggestion. A scheduled assignment rule would be very useful for weekend rotations, and I can see how manually changing the support@ rule every Friday adds avoidable work.\n\nI've added your request to our workflow automation backlog with the use case of day-of-week routing for shared inboxes. Today, the closest workaround is to create separate saved rules for weekday and weekend teams, then enable or disable them manually.\n\nIf you can share how many rotations you manage and whether holidays need separate coverage, I'll add that detail to the product request so our team can evaluate the full scheduling need."
+  },
+  {
+    "id": "feature_request_02",
+    "category": "feature_request",
+    "incoming_email": "Subject: Dark mode please\n\nHi, any chance CollabMail can get dark mode? Our team works late shifts and the shared inbox view is very bright at night.",
+    "expected_reply": "Hi Alex,\n\nThanks for asking. Dark mode is a common request from teams with late shifts, and your note about the shared inbox view being bright is helpful context.\n\nWe don't have a release date yet, but I've added your workspace to the dark mode request so we can notify you if it enters beta. In the meantime, browser-level dark mode extensions may work for parts of CollabMail, though we can't guarantee every status color or analytics chart will render perfectly.\n\nIf there are specific screens that are hardest to use at night, such as the conversation timeline or reply editor, send them over and I'll attach that feedback."
+  },
+  {
+    "id": "feature_request_03",
+    "category": "feature_request",
+    "incoming_email": "Subject: Better analytics export filters\n\nHello,\n\nCould you add filters to analytics exports for tags, assignees, and business hours? Our leadership team wants monthly SLA reports excluding weekends and excluding the \"billing follow-up\" tag.",
+    "expected_reply": "Hi Morgan,\n\nThanks for the detailed reporting request. Tag, assignee, and business-hours filters for analytics exports would make SLA reporting much cleaner, especially for leadership reports that exclude weekends and specific workflows.\n\nToday, the analytics dashboard can filter by shared inbox, date range, and status, and CSV exports can be filtered further in a spreadsheet after download. I agree that doing this directly in CollabMail would save time and reduce manual reporting errors.\n\nI've logged this as a reporting enhancement and included your example of excluding weekends and the \"billing follow-up\" tag. If you have a sample report format, you can send it to us and we'll attach it to the product ticket."
+  },
+  {
+    "id": "feature_request_04",
+    "category": "feature_request",
+    "incoming_email": "Subject: Feature idea: AI template suggestions\n\nHi team,\n\nIt would be great if CollabMail suggested an email template based on the customer's question. We have about 80 templates and agents waste time searching for the right one.",
+    "expected_reply": "Hi Priyanka,\n\nThat is a strong idea. With 80 templates, suggesting the right response based on the customer's message could reduce handle time and help agents stay consistent.\n\nI've added your request to our AI-assisted workflow feedback, specifically for recommending templates inside the reply composer. Today, agents can use template folders, search, and favorites to reduce browsing time, but we understand that still requires manual selection.\n\nIf you can share the top template categories your team uses, such as refunds, onboarding, or troubleshooting, I'll include that context for our product team."
+  },
+  {
+    "id": "feature_request_05",
+    "category": "feature_request",
+    "incoming_email": "Subject: Jira integration request\n\nHello,\n\nWe use Jira Cloud for engineering tickets. Could CollabMail add a native Jira integration so agents can create a bug ticket from a conversation without going through Zapier?",
+    "expected_reply": "Hi Daniel,\n\nThanks for sharing this. A native Jira Cloud integration is a practical request for support teams that escalate bugs from customer conversations.\n\nAt the moment, the supported workflow is through Zapier or our API, where a tag such as \"bug\" can create a Jira issue. I understand that a native integration would allow agents to create and link a ticket directly from the conversation timeline, which is smoother and easier to audit.\n\nI've added your request to our integrations backlog. If you can tell us which Jira fields your agents need to set, such as project, issue type, priority, component, and attachments, we'll include that in the product notes."
+  },
+  {
+    "id": "feature_request_06",
+    "category": "feature_request",
+    "incoming_email": "Subject: Custom roles for team leads\n\nHi,\n\nWe need a role between agent and admin. Team leads should manage assignments and view analytics for their shared inbox, but they should not change billing, SSO, or workspace-wide settings.",
+    "expected_reply": "Hi Heather,\n\nThanks for the clear role definition. A team lead role with inbox-level administration and analytics access, but no billing or SSO control, makes sense for mid-market teams with several departments.\n\nCurrently, CollabMail offers agent, manager, and admin roles, with some permissions controlled at the shared inbox level. We do not yet support fully custom roles, but I've logged your request with the specific permissions you listed: assignment management, inbox analytics, and restricted workspace settings.\n\nAs a workaround, you can grant manager access only to the relevant shared inboxes and keep billing and SSO limited to admins. If you share the permissions matrix you want, we can help map it to the closest current setup."
+  },
+  {
+    "id": "feature_request_07",
+    "category": "feature_request",
+    "incoming_email": "Subject: Need WhatsApp inbox support\n\nHi CollabMail,\n\nOur customers increasingly message us on WhatsApp. Can CollabMail support WhatsApp as a shared inbox alongside support@ so agents can assign and comment in one place?",
+    "expected_reply": "Hi Luis,\n\nThanks for the request. Supporting WhatsApp as another shared channel alongside email would be valuable for teams that want one assignment and collaboration workflow.\n\nCollabMail is currently focused on Gmail-based shared inboxes, but we are collecting demand for non-email channels. I've added your workspace to the WhatsApp request and noted that your team wants assignments, internal comments, and unified agent workflows.\n\nIf you already use a WhatsApp Business provider, please send the provider name. That helps our product team understand which integration paths would matter most."
+  },
+  {
+    "id": "feature_request_08",
+    "category": "feature_request",
+    "incoming_email": "Subject: UI feedback: compact conversation list\n\nHello,\n\nThe new conversation list has too much vertical spacing for our operations team. We handle hundreds of vendor emails per day and would like a compact density option.",
+    "expected_reply": "Hi Rebecca,\n\nThanks for the thoughtful UI feedback. For high-volume operations teams, a compact conversation list can make scanning much faster.\n\nWe do not currently offer a density setting, but I've logged your request for comfortable and compact display modes in the shared inbox view. I included your note that vendor teams handle hundreds of emails per day and need more rows visible without scrolling.\n\nIf there are specific fields you would hide in compact mode, such as preview text, tags, or avatars, send that detail and I'll add it to the request."
+  },
+  {
+    "id": "feature_request_09",
+    "category": "feature_request",
+    "incoming_email": "Subject: API access to assignment rules\n\nHi,\n\nCan you expose assignment rules through the API? We manage rules for 20 regional shared inboxes and want to version-control changes instead of editing them manually in the UI.",
+    "expected_reply": "Hi Chen,\n\nThanks for the request. API access for assignment rules would be helpful for teams managing many regional inboxes and wanting change control.\n\nOur current API supports conversations, users, tags, metrics, and webhooks, but it does not yet support creating or updating assignment rules. I've added your use case to the developer API backlog, including version control and managing rules across 20 shared inboxes.\n\nIf you can share the rule properties you would need, such as conditions, assignee pools, priority order, and enabled status, we'll attach that to the API design feedback."
+  },
+  {
+    "id": "feature_request_10",
+    "category": "feature_request",
+    "incoming_email": "Subject: Approval workflow before sending\n\nHi team,\n\nWe need junior agents to draft replies that a supervisor approves before sending to enterprise customers. Can CollabMail add an approval workflow?",
+    "expected_reply": "Hi Natalie,\n\nThanks for explaining the workflow. Draft approval before sending is a common need for teams supporting high-value or regulated customers.\n\nCollabMail currently supports internal notes, mentions, and draft collaboration, but it does not enforce a supervisor approval step before an email can be sent. I've logged your request for a formal approval workflow with draft submission, reviewer notification, and send permission after approval.\n\nFor now, teams usually create a tag like \"needs approval\" and require junior agents to mention a supervisor before sending. It is not enforced by the system, but it can help standardize the review process while we evaluate the feature."
+  },
+  {
+    "id": "feature_request_11",
+    "category": "feature_request",
+    "incoming_email": "Subject: Saved dashboard views\n\nHello,\n\nCan managers save analytics dashboard views? I repeatedly filter by support@, VIP tag, business hours, and last 30 days for our Monday meeting.",
+    "expected_reply": "Hi Omar,\n\nThanks for the suggestion. Saved analytics views would be a useful way to avoid rebuilding the same dashboard filters before recurring meetings.\n\nI've logged your request with the exact view you use: support@, VIP tag, business hours, and last 30 days. Currently, managers can bookmark the analytics page, but filter state may not persist across all dashboard sections.\n\nAs a short-term workaround, exporting the same report from collabmail.com/analytics/export each Monday may be faster than recreating every chart. We'll let you know if saved views become available."
+  },
+  {
+    "id": "feature_request_12",
+    "category": "feature_request",
+    "incoming_email": "Subject: Custom email template variables\n\nHi,\n\nWe want template variables for customer plan, renewal date, and CSM name. Right now we only see basic fields like first name and company.",
+    "expected_reply": "Hi Selin,\n\nThanks for the request. Custom template variables would make email templates much more useful for customer success and renewal workflows.\n\nToday, CollabMail supports standard variables such as first name, full name, company, assignee, and shared inbox name. We do not yet support custom fields like customer plan, renewal date, or CSM name unless those values are inserted manually.\n\nI've added your use case to our template customization backlog. If those fields live in Salesforce or another CRM, please tell us which system and field names so we can connect this request with integration-based variables."
+  },
+  {
+    "id": "feature_request_13",
+    "category": "feature_request",
+    "incoming_email": "Subject: Feature request: merge conversations\n\nHi CollabMail,\n\nCustomers sometimes email both support@ and billing@ about the same issue. Can you add a way to merge conversations so the assignment, notes, and history stay together?",
+    "expected_reply": "Hi George,\n\nThat is a great workflow request. When customers contact multiple shared inboxes about the same issue, merging conversations would help preserve context and reduce duplicate work.\n\nCollabMail currently supports linking related conversations with internal notes and tags, but it does not fully merge timelines, assignments, or status history. I've logged your request for conversation merge with cross-inbox support between addresses like support@ and billing@.\n\nIf duplicate conversations are common for specific inboxes, you might also add an assignment rule that tags possible duplicates when the same sender contacts multiple inboxes within a short time window."
+  },
+  {
+    "id": "feature_request_14",
+    "category": "feature_request",
+    "incoming_email": "Subject: Need audit log export\n\nHello,\n\nOur compliance team wants a monthly export of audit log events for assignment changes, template edits, and user role updates. Can this be exported automatically?",
+    "expected_reply": "Hi Irene,\n\nThanks for the compliance-focused request. Automated audit log exports for assignment changes, template edits, and role updates would be useful for teams with monthly review requirements.\n\nCurrently, admins can view the audit log in CollabMail and manually export filtered results on Enterprise plans. Automated scheduled exports are not available yet, so I've logged this as a compliance reporting enhancement.\n\nIf your compliance team requires a specific format or delivery method, such as CSV to SFTP or email to a security mailbox, send that detail and I'll add it to the request."
+  },
+  {
+    "id": "feature_request_15",
+    "category": "feature_request",
+    "incoming_email": "Subject: Keyboard shortcuts for triage\n\nHi,\n\nCould you add Gmail-like keyboard shortcuts to assign, tag, close, snooze, and move to next conversation? Our power users want to triage without touching the mouse.",
+    "expected_reply": "Hi Will,\n\nThanks for the suggestion. Keyboard shortcuts for triage actions would be a strong productivity improvement for high-volume teams.\n\nCollabMail has a few editor shortcuts today, but we do not yet support a full Gmail-like shortcut set for assign, tag, close, snooze, and next conversation. I've added your request to our inbox productivity backlog and included the actions your power users mentioned.\n\nIf your team has a preferred shortcut mapping, send it over. That helps us evaluate defaults that feel familiar without conflicting with browser or Gmail shortcuts."
+  },
+  {
+    "id": "feature_request_16",
+    "category": "feature_request",
+    "incoming_email": "Subject: Custom SLA calendars\n\nHi team,\n\nWe need SLA timers to pause on local holidays for each region. Our APAC and EMEA support teams have different holiday calendars, but one global support@ inbox.",
+    "expected_reply": "Hi Meera,\n\nThanks for the detailed SLA request. Regional holiday calendars for a global support@ inbox are a real need for distributed teams.\n\nCollabMail currently supports business hours for SLA reporting, but it does not yet support separate holiday calendars by region within one shared inbox. I've logged your request for custom SLA calendars with APAC and EMEA holiday schedules.\n\nAs a workaround, some teams split regional queues using tags or separate shared inboxes so reporting can be filtered by region. If you can share how you identify APAC versus EMEA conversations today, we can suggest the least disruptive setup."
+  },
+  {
+    "id": "feature_request_17",
+    "category": "feature_request",
+    "incoming_email": "Subject: Native Teams integration\n\nHello,\n\nWe use Microsoft Teams instead of Slack. Could CollabMail send assignment and mention notifications to Teams channels?",
+    "expected_reply": "Hi Patrick,\n\nThanks for reaching out. A native Microsoft Teams integration is a sensible request, especially for organizations that do not use Slack.\n\nCollabMail currently supports Slack notifications and webhook-based workflows, but not a native Teams app. I've added your request for Teams channel notifications for assignments, mentions, and priority customer emails.\n\nFor now, your team may be able to route CollabMail webhooks into Teams using Power Automate. If you want, we can share the webhook event types that map best to assignment and mention notifications."
+  },
+  {
+    "id": "feature_request_18",
+    "category": "feature_request",
+    "incoming_email": "Subject: Hide internal tags from some agents\n\nHi,\n\nCan we hide certain tags from frontline agents? We have internal risk tags and renewal likelihood tags that managers should see, but agents should not.",
+    "expected_reply": "Hi Fatima,\n\nThanks for explaining the permission need. Tag visibility controls would help teams that use sensitive internal labels for risk, renewals, or escalation planning.\n\nAt the moment, tags are visible to users who can access the shared inbox conversation. CollabMail does not yet support tag-level permissions. I've logged your request for restricted tags that only managers or selected roles can see.\n\nAs a temporary workaround, you may want to keep sensitive context in manager-only notes or a CRM field with restricted access, depending on your current permissions."
+  },
+  {
+    "id": "feature_request_19",
+    "category": "feature_request",
+    "incoming_email": "Subject: Bulk edit email templates\n\nHi support,\n\nWe rebranded and need to update the footer across 64 email templates. Can you add bulk edit or shared snippets so we don't have to edit every template one by one?",
+    "expected_reply": "Hi Jenna,\n\nThat rebrand workflow makes complete sense. Bulk editing template footers or using shared snippets would save a lot of manual work and reduce inconsistencies.\n\nCollabMail does not currently support bulk template editing, but I've logged your request for reusable template snippets and workspace-wide footer updates. I included your example of updating 64 templates during a rebrand.\n\nFor now, if the footer is identical across templates, our support team can check whether a one-time backend-assisted update is possible for your workspace. Please send the old footer text and the new approved footer if you would like us to review that option."
+  },
+  {
+    "id": "feature_request_20",
+    "category": "feature_request",
+    "incoming_email": "Subject: Customer satisfaction survey after close\n\nHello,\n\nCan CollabMail automatically send a CSAT survey when a conversation is closed? We currently copy a survey link manually from a template.",
+    "expected_reply": "Hi Andre,\n\nThanks for the request. Automatic CSAT after conversation close is a natural fit for support teams tracking customer experience.\n\nCollabMail currently lets agents insert survey links through templates, but it does not automatically send a CSAT message when a conversation closes. I've added your request for a close-triggered CSAT workflow with customizable survey links and reporting.\n\nAs a short-term workaround, you can create a closing template with the survey link and train agents to use it before setting the conversation to closed. If your survey tool supports unique links, let us know which provider you use so we can include that in the integration request."
+  },
+  {
+    "id": "account_01",
+    "category": "account",
+    "incoming_email": "Subject: Password reset not arriving\n\nHi,\n\nI requested a password reset twice but never received the email. I checked spam. My login is kara@northpeak.io.",
+    "expected_reply": "Hi Kara,\n\nSorry the reset email is not reaching you. I checked the account status for kara@northpeak.io, and the user appears active.\n\nPlease make sure your mail team allows messages from no-reply@collabmail.com and try the reset again at collabmail.com/reset-password. If your workspace uses Google SSO, you will not receive a CollabMail password reset and should sign in with Google instead.\n\nIf the email still does not arrive within 10 minutes, ask your admin to confirm whether SSO is enforced for your workspace, and we can check the delivery logs for the reset message."
+  },
+  {
+    "id": "account_02",
+    "category": "account",
+    "incoming_email": "Subject: Remove former employee\n\nHello,\n\nPlease remove troy@greenbasket.com from our CollabMail account. He left last week and still appears assigned to several conversations in support@.",
+    "expected_reply": "Hi Melissa,\n\nThanks for letting us know. A workspace admin can remove Troy from collabmail.com/settings/team by selecting troy@greenbasket.com and choosing Deactivate user.\n\nBefore deactivation, CollabMail will prompt you to reassign his open conversations in support@ to another teammate or leave them unassigned. His historical replies and internal notes will remain in the conversation timeline for audit purposes.\n\nIf you are not an admin, please have an admin confirm the removal. For security, we can't deactivate users based only on a request from a non-admin."
+  },
+  {
+    "id": "account_03",
+    "category": "account",
+    "incoming_email": "Subject: Add 14 new agents to sales inbox\n\nHi CollabMail,\n\nWe are onboarding a new outbound team next Monday. What is the fastest way to add 14 agents to sales@ with agent permissions only? They should not see billing or analytics.",
+    "expected_reply": "Hi Devon,\n\nThe fastest path is to use bulk invite from collabmail.com/settings/team. Paste the 14 email addresses, set their role to Agent, and then assign them to the sales@ shared inbox.\n\nAgent permissions will let them view and reply in assigned shared inboxes, use templates, add notes, and manage their conversations. They will not have access to billing, workspace settings, or the analytics dashboard unless an admin grants additional permissions.\n\nIf you have the list ready, you can also upload a CSV from the same page. We recommend sending invites at least one day before onboarding so everyone can sign in and connect Gmail before Monday."
+  },
+  {
+    "id": "account_04",
+    "category": "account",
+    "incoming_email": "Subject: Transfer account ownership\n\nHi,\n\nOur workspace owner, Priya Shah, is leaving the company. Please transfer CollabMail ownership to me, alan@viewbridge.com. I'm already an admin.",
+    "expected_reply": "Hi Alan,\n\nWe can help with the ownership transfer. Since you are already an admin, the current owner can transfer ownership to you from collabmail.com/settings/workspace by selecting Change owner.\n\nIf Priya still has access, that self-service option is fastest and takes effect immediately. If she no longer has access, we'll need verification from an authorized company contact or your IT administrator before we can transfer ownership manually.\n\nPlease let us know whether Priya can approve the change. Once ownership is transferred, you'll control billing, workspace settings, SSO, data exports, and user management."
+  },
+  {
+    "id": "account_05",
+    "category": "account",
+    "incoming_email": "Subject: SSO setup question\n\nHello,\n\nWe want to set up SAML SSO with Okta for 220 employees. Do you have setup docs, and can we test with a small group before enforcing it?",
+    "expected_reply": "Hi Simone,\n\nYes. You can configure SAML SSO with Okta from collabmail.com/settings/security/sso. The setup page includes the ACS URL, entity ID, and metadata values you'll need in Okta.\n\nWe recommend testing with a small admin group first. You can keep password or Google login available while testing, then enforce SSO for all users after you confirm login, role mapping, and fallback admin access work correctly.\n\nIf you would like a guided setup, send us two preferred times and we can schedule a 30-minute session with a support engineer."
+  },
+  {
+    "id": "account_06",
+    "category": "account",
+    "incoming_email": "Subject: GDPR deletion request\n\nHi CollabMail,\n\nA former customer requested deletion of their personal data. Their email is marco.rossi@example.it. How do we delete their data from our support@ history?",
+    "expected_reply": "Hi Elena,\n\nWe can guide you through this. Admins can submit a GDPR deletion request from collabmail.com/settings/privacy by entering the requester's email address, marco.rossi@example.it, and selecting the relevant shared inboxes.\n\nCollabMail will locate conversation data, internal notes containing that address, and customer profile records tied to the email. The deletion process can take up to 30 days, and you'll receive a confirmation report when it is complete.\n\nBefore submitting, we recommend exporting any records you are legally required to retain outside CollabMail. If you need help with the request form, send us the workspace URL and we'll point you to the exact section."
+  },
+  {
+    "id": "account_07",
+    "category": "account",
+    "incoming_email": "Subject: Data export for audit\n\nHello,\n\nWe need a full export of conversation history, assignments, notes, and analytics for Q2. Our auditors want it by Friday. Where can we get this?",
+    "expected_reply": "Hi Manish,\n\nWorkspace admins can request exports at collabmail.com/settings/export. Choose the Q2 date range, select the shared inboxes, and include conversations, assignments, internal notes, and analytics CSVs.\n\nFor large workspaces, exports can take several hours to prepare. Once ready, CollabMail emails a secure download link to the requesting admin. The link expires after 7 days.\n\nIf your auditors need a specific format or if the export is urgent, reply with the workspace URL and shared inbox list. We can monitor the export job and help confirm it completes before Friday."
+  },
+  {
+    "id": "account_08",
+    "category": "account",
+    "incoming_email": "Subject: Change role from manager to agent\n\nHi,\n\nCan you change rachel@orbitline.com from manager to agent? She should still access support@ but not see team performance analytics.",
+    "expected_reply": "Hi Chris,\n\nA workspace admin can make that change from collabmail.com/settings/team. Select rachel@orbitline.com, change her role from Manager to Agent, and keep her assigned to the support@ shared inbox.\n\nAfter the change, Rachel will still be able to view and reply to conversations in support@, use templates, add internal notes, and manage assigned work. She will no longer have manager-level analytics or team performance access.\n\nIf you are not an admin, please ask a workspace admin to make the update or confirm the request here."
+  },
+  {
+    "id": "account_09",
+    "category": "account",
+    "incoming_email": "Subject: Onboard HR department\n\nHi CollabMail,\n\nOur HR team wants to start using people@company.com for candidate and employee questions. What steps should we take to onboard a new department without mixing HR emails into support@?",
+    "expected_reply": "Hi Laura,\n\nGreat question. To onboard HR separately, create a new shared inbox for people@company.com from collabmail.com/settings/inboxes and add only the HR team members who should access it.\n\nKeep HR separate from support@ by using distinct inbox membership, tags, templates, and assignment rules. You can also restrict analytics access to HR managers if you do not want support leads seeing HR volume or response-time reports.\n\nBefore launch, connect the Gmail mailbox, create HR-specific templates, set assignment rules for candidate and employee categories, and test with a few internal messages. We can review the setup if you send us your desired HR user list and workflow."
+  },
+  {
+    "id": "account_10",
+    "category": "account",
+    "incoming_email": "Subject: User can see wrong inbox\n\nHi,\n\nOne of our contractors can see sales@, but she should only see support@. I'm worried she may have viewed customer pricing conversations.",
+    "expected_reply": "Hi Blake,\n\nI understand the concern. Please go to collabmail.com/settings/team, select the contractor, and remove her from the sales@ shared inbox immediately. Then confirm she remains assigned only to support@.\n\nTo review access, open collabmail.com/settings/audit-log and filter by the contractor's email and the sales@ inbox. The audit log can show conversation views, replies, assignments, and other relevant actions depending on your plan.\n\nIf you send us the contractor's email and the approximate access window, we can help you review the logs and confirm whether any sales@ conversations were opened."
+  },
+  {
+    "id": "account_11",
+    "category": "account",
+    "incoming_email": "Subject: Rename workspace\n\nHello,\n\nWe changed our company name from TrackHive to ClearTrail. Can you rename our CollabMail workspace and update the sender display name on templates?",
+    "expected_reply": "Hi Jenna,\n\nYou can rename the workspace from collabmail.com/settings/workspace by updating the workspace name from TrackHive to ClearTrail. This changes the name shown inside CollabMail and on admin pages.\n\nTemplate sender display names are managed separately. Go to collabmail.com/settings/templates and update any templates that include the old company name. If your Gmail sender name also needs to change, update it in Google Workspace for the connected mailbox.\n\nIf you have many templates, export the template list first so you can confirm every TrackHive reference has been updated."
+  },
+  {
+    "id": "account_12",
+    "category": "account",
+    "incoming_email": "Subject: Reinvite expired users\n\nHi support,\n\nWe sent invites to our new team last month, but several links expired before they joined. Can we resend invitations in bulk?",
+    "expected_reply": "Hi Aisha,\n\nYes. Admins can resend expired invitations in bulk from collabmail.com/settings/team by filtering for Pending users and selecting Resend invites.\n\nThe new invite links will be sent to each user's email and are valid for 7 days. Their assigned shared inboxes, roles, and template access will remain the same as originally configured.\n\nIf some users no longer need access, you can remove them from the pending list before resending to keep your seat count accurate."
+  },
+  {
+    "id": "account_13",
+    "category": "account",
+    "incoming_email": "Subject: SCIM provisioning\n\nHello,\n\nDo you support SCIM provisioning with Azure AD? We want users added and removed automatically when they join or leave support groups.",
+    "expected_reply": "Hi Victor,\n\nSCIM provisioning is available on the Enterprise plan. With Azure AD, you can provision and deprovision users automatically, and map groups to CollabMail roles or shared inbox access depending on your configuration.\n\nSetup starts at collabmail.com/settings/security/scim, where an admin can generate the SCIM token and copy the tenant URL into Azure AD. We recommend testing with a small group before enabling automatic deprovisioning for your full support organization.\n\nIf you are not yet on Enterprise, we can connect you with our account team to discuss the plan requirements and rollout support."
+  },
+  {
+    "id": "account_14",
+    "category": "account",
+    "incoming_email": "Subject: Change billing admin only\n\nHi,\n\nCan we make finance@ourco.com the billing admin without giving them access to customer conversations in support@ or sales@?",
+    "expected_reply": "Hi Kelly,\n\nYes. You can add finance@ourco.com as a billing-only contact from collabmail.com/billing/contacts. Billing contacts can receive invoices, update payment information if permitted, and view billing details without being assigned to shared inboxes.\n\nDo not add the finance user to support@ or sales@ unless they need conversation access. Billing contact access is separate from agent or manager access.\n\nAfter adding the billing contact, you can choose whether they receive receipts, failed-payment notices, renewal reminders, or all billing emails."
+  },
+  {
+    "id": "account_15",
+    "category": "account",
+    "incoming_email": "Subject: Disable account temporarily\n\nHi,\n\nOne of our agents is going on leave for three months. Can we disable her account temporarily without losing her past assignments and notes?",
+    "expected_reply": "Hi Eric,\n\nYes. You can deactivate the agent from collabmail.com/settings/team and reactivate her when she returns. Her past replies, assignments, and internal notes will remain in the conversation history.\n\nBefore deactivation, CollabMail will let you reassign her open conversations so nothing remains stuck while she is away. Deactivation also removes her from active seat billing at the next renewal.\n\nWhen she returns, reactivate her user and add her back to the relevant shared inboxes. She may need to reconnect Gmail if the authorization expired during leave."
+  },
+  {
+    "id": "account_16",
+    "category": "account",
+    "incoming_email": "Subject: Export my personal data\n\nHello,\n\nI'm leaving my company and would like a copy of my personal data in CollabMail, including my profile and activity. How do I request this?",
+    "expected_reply": "Hi Sofia,\n\nYou can request a personal data export through your workspace admin or by contacting privacy@collabmail.com from the email address associated with your account.\n\nThe export can include profile information, account metadata, and activity associated with your user. Customer conversation content may belong to your employer's workspace, so access to that data may require company authorization.\n\nPlease send the request from your CollabMail login email and include the workspace name. Our privacy team will verify the request and respond with next steps according to applicable privacy laws."
+  },
+  {
+    "id": "account_17",
+    "category": "account",
+    "incoming_email": "Subject: Account locked after too many attempts\n\nHi,\n\nMy account says it is locked because of too many failed login attempts. I need to get into the inbox before our 2 PM customer escalation call.",
+    "expected_reply": "Hi Henry,\n\nSorry you're blocked before an escalation call. Account locks automatically clear after 30 minutes, but an admin can also send a fresh password reset or confirm whether SSO should be used instead.\n\nPlease try signing in again after the lock window or use collabmail.com/reset-password if password login is enabled for your workspace. If your company enforces SSO, use the SSO button rather than password login.\n\nIf you send us your login email and workspace name, we can check the lock status and confirm the fastest recovery path."
+  },
+  {
+    "id": "account_18",
+    "category": "account",
+    "incoming_email": "Subject: Department-specific admins\n\nHi CollabMail,\n\nCan we have an admin for each department? Our Sales Ops lead should manage sales@ users and templates, but not touch support@ or company-wide settings.",
+    "expected_reply": "Hi Rachel,\n\nYou can assign managers at the shared inbox level so the Sales Ops lead can manage sales@ workflows without becoming a full workspace admin.\n\nA sales@ manager can help with assignments, templates related to that inbox, and team activity depending on your plan. Workspace-wide settings such as billing, SSO, security, and support@ access remain limited to admins.\n\nIf you need stricter custom permission boundaries, we can document that as a feature request. For now, shared-inbox manager access is the best fit for department-specific administration."
+  },
+  {
+    "id": "account_19",
+    "category": "account",
+    "incoming_email": "Subject: Restore deleted template\n\nHello,\n\nSomeone deleted our \"Refund approved\" email template this morning. Can we restore it? It had specific billing instructions our agents use daily.",
+    "expected_reply": "Hi Tyler,\n\nWe can help investigate. First, check collabmail.com/settings/audit-log and filter for template deletion events today. The log should show who deleted the \"Refund approved\" template and when.\n\nDepending on your plan and deletion timing, our support team may be able to restore the template from a recent backup. Please send us the workspace URL and approximate deletion time so we can check recovery options.\n\nWhile we review, ask your team not to recreate a template with the exact same name, as that can make restoration more confusing."
+  },
+  {
+    "id": "account_20",
+    "category": "account",
+    "incoming_email": "Subject: Change primary domain\n\nHi,\n\nWe moved from oldbrand.com to newbrand.com. How do we update CollabMail so new users can join with newbrand.com emails and old users still keep their history?",
+    "expected_reply": "Hi Amrita,\n\nYou can add newbrand.com as an allowed domain from collabmail.com/settings/security/domains. After verification, admins can invite new users with newbrand.com emails while existing oldbrand.com users keep their conversation history, notes, and assignments.\n\nFor current users who are changing email addresses, update each user profile rather than creating duplicate accounts. This preserves historical activity and avoids splitting assignments between old and new identities.\n\nIf you use SSO or SCIM, update the domain and user mappings in your identity provider as well. Send us your workspace URL if you want us to review the migration checklist before you switch everyone over."
+  },
+  {
+    "id": "general_inquiry_01",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: How is CollabMail different from Google Groups?\n\nHi,\n\nWe currently use Google Groups for support@. What does CollabMail add besides everyone seeing the same email?",
+    "expected_reply": "Hi Jamie,\n\nGoogle Groups is useful for distribution, but CollabMail adds team workflow on top of shared inboxes inside Gmail. Teams can assign conversations to owners, add internal notes, prevent duplicate replies with collision detection, use shared email templates, and track response times in the analytics dashboard.\n\nFor support@, that means agents can see who owns each customer email, managers can report on volume and SLA performance, and teammates can collaborate without forwarding threads around.\n\nA good next step is to connect one shared inbox during a trial and compare your current Google Groups workflow against CollabMail assignments and reporting."
+  },
+  {
+    "id": "general_inquiry_02",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Migration from Hiver\n\nHello,\n\nWe are considering moving from Hiver to CollabMail for 35 support and success users. Can you migrate shared inbox history, tags, and templates?",
+    "expected_reply": "Hi Caroline,\n\nYes, we can help teams migrate from Hiver. The typical migration includes setting up the same Gmail shared inboxes, recreating tags, importing or rebuilding email templates, and advising on assignment rules.\n\nHistorical conversation migration depends on what data you can export from Hiver and what you want visible inside CollabMail. Many teams keep older history in Gmail and start fresh with CollabMail assignments and analytics from the migration date.\n\nIf you send us the number of shared inboxes, template count, tag list, and desired launch date, we can provide a migration checklist and timeline for your 35-user team."
+  },
+  {
+    "id": "general_inquiry_03",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Do you support Gmail only?\n\nHi CollabMail,\n\nDoes your product work with Outlook or only Gmail? Our support team uses Gmail today, but sales uses Microsoft 365.",
+    "expected_reply": "Hi Marcus,\n\nCollabMail is built primarily for shared inbox collaboration inside Gmail. Support teams using Gmail can manage shared inboxes like support@ with assignments, internal notes, templates, and analytics.\n\nMicrosoft 365 and Outlook shared inbox support is not generally available today. If your sales team is on Microsoft 365, they would not get the same in-inbox experience unless they also work from Gmail.\n\nIf you want, we can help evaluate a phased rollout for the Gmail-based support team first and document the Outlook requirement for your sales organization."
+  },
+  {
+    "id": "general_inquiry_04",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Security and SOC 2\n\nHello,\n\nOur IT team wants to know whether CollabMail is SOC 2 compliant and how you handle access to customer emails.",
+    "expected_reply": "Hi Priya,\n\nSecurity is a core part of CollabMail. We can share our current security documentation, including SOC 2 information, data handling practices, encryption details, access controls, and subprocessors, under NDA if required by your procurement process.\n\nCollabMail accesses Gmail data only through authorized Google OAuth scopes needed to provide shared inbox collaboration, assignment, templates, and analytics. Access is controlled by workspace permissions, and admin actions can be reviewed through audit logs on supported plans.\n\nPlease send your IT contact or security questionnaire to security@collabmail.com, and we'll route it to the right team."
+  },
+  {
+    "id": "general_inquiry_05",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Best practices for support@ setup\n\nHi,\n\nWe're a 9-person startup setting up support@ for the first time. Any best practices for assignment rules and tags so we don't overcomplicate it?",
+    "expected_reply": "Hi Sam,\n\nFor a 9-person startup, start simple. Create one support@ shared inbox, use a small set of tags such as billing, bug, feature request, urgent, and waiting on customer, and set one round-robin assignment rule for new unassigned conversations.\n\nAdd email templates for your top 10 repeated replies, such as password help, refund policy, troubleshooting steps, and escalation acknowledgments. Use the analytics dashboard after two weeks to see which tags and response-time patterns matter before adding more complexity.\n\nThe best setup is one your team will actually maintain. You can always add more rules once the basic flow is working."
+  },
+  {
+    "id": "general_inquiry_06",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: SLA options\n\nHello,\n\nDo you offer SLA tracking? We need first response within 2 business hours for enterprise customers and 8 business hours for everyone else.",
+    "expected_reply": "Hi Dana,\n\nYes, CollabMail can help track SLA performance through tags, priority workflows, and the analytics dashboard. You can tag enterprise customers, set assignment rules to prioritize them, and report on first response time by tag or shared inbox depending on your plan.\n\nFor your workflow, we would recommend an enterprise-customer tag or CRM-based identifier, a priority assignment rule, and saved analytics filters for first response within 2 business hours versus 8 business hours for standard customers.\n\nIf you need automated SLA breach alerts or custom business-hour calendars, let us know your exact requirements so we can confirm the best plan fit."
+  },
+  {
+    "id": "general_inquiry_07",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Pricing for 18 users\n\nHi,\n\nWhat would CollabMail cost for 18 users and two inboxes, support@ and billing@? We need templates and basic analytics but not SSO.",
+    "expected_reply": "Hi Victor,\n\nFor 18 users with support@ and billing@, shared templates, assignments, and basic analytics, the Pro plan is likely the right fit. At $29 per user per month, the monthly cost would be $522 before applicable taxes.\n\nYou do not need SSO for that plan, and both shared inboxes can use assignment rules, internal notes, collision detection, and email templates.\n\nYou can start a trial at collabmail.com/start or view plan details at collabmail.com/pricing. If you expect to add advanced analytics or SSO later, we can also compare Business and Enterprise options."
+  },
+  {
+    "id": "general_inquiry_08",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Can agencies use CollabMail for multiple clients?\n\nHi,\n\nWe are an agency managing customer support for five ecommerce brands. Can we keep each client's shared inbox, templates, and analytics separate?",
+    "expected_reply": "Hi Elena,\n\nYes, agencies can use CollabMail, and the best setup is usually separate workspaces or clearly separated shared inboxes depending on how strict the client separation needs to be.\n\nIf agents work across all five brands but data must remain separate for reporting and permissions, separate workspaces provide the cleanest boundary. If the same team can access every brand, one workspace with five shared inboxes, client-specific templates, tags, and analytics filters may be enough.\n\nWe'd be happy to review your access requirements and recommend the structure that avoids mixing client conversations."
+  },
+  {
+    "id": "general_inquiry_09",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Does CollabMail replace help desk software?\n\nHello,\n\nWe use Zendesk today but our agents prefer Gmail. Is CollabMail meant to replace a help desk, or does it sit alongside one?",
+    "expected_reply": "Hi Omar,\n\nCollabMail is designed for teams that want help desk-style collaboration while staying inside Gmail. It can replace a traditional help desk for teams whose support workflow is mostly email-based and who need assignments, internal notes, templates, collision detection, and analytics.\n\nFor teams that rely heavily on complex ticket forms, multi-channel support, phone, chat, or knowledge base workflows, CollabMail may sit alongside or cover only the email support portion.\n\nA practical way to evaluate this is to pilot one shared inbox, such as support@, and compare your must-have Zendesk workflows against CollabMail during the trial."
+  },
+  {
+    "id": "general_inquiry_10",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Onboarding help for mid-market team\n\nHi,\n\nWe have 75 users across support, sales, and operations. Do you provide onboarding help, or are we expected to set everything up ourselves?",
+    "expected_reply": "Hi Rachel,\n\nFor a 75-user rollout, we do provide onboarding support. The process usually includes workspace setup, shared inbox connection, role and permission planning, template migration, assignment rules, analytics configuration, and admin training.\n\nYour team can still self-serve many steps in the app, but we recommend a guided launch plan for support, sales, and operations so each department has the right inboxes and workflows.\n\nPlease book an onboarding consultation at collabmail.com/onboarding or send us your target launch date, department list, and number of shared inboxes. We'll recommend a rollout plan."
+  },
+  {
+    "id": "general_inquiry_11",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Data residency\n\nHello,\n\nDo you offer EU data residency? Our legal team is reviewing vendors for our German customer support team.",
+    "expected_reply": "Hi Lukas,\n\nThanks for asking. Data residency requirements can vary by plan and contract, so we would want to confirm your exact legal and operational needs before committing to an answer.\n\nPlease send your data residency requirements, expected user count, and whether all shared inboxes are for EU-based customers to security@collabmail.com. Our security and enterprise teams can provide the current options, subprocessors, and contractual documentation.\n\nIf your review includes a vendor questionnaire or DPA, attach it and we'll route it to the right team."
+  },
+  {
+    "id": "general_inquiry_12",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Trial limits\n\nHi,\n\nWhat can we test during the free trial? We want to try assignment rules, templates, Slack alerts, and analytics with our real support@ inbox.",
+    "expected_reply": "Hi Ava,\n\nDuring the free trial, you can connect a real shared inbox like support@ and test core collaboration features including assignments, internal notes, collision detection, email templates, and the analytics dashboard.\n\nYou can also test integrations such as Slack alerts if they are included in the plan you select for the trial. We recommend inviting a small pilot group, creating a few common templates, and using real support volume for at least one week so the analytics are meaningful.\n\nYou can start at collabmail.com/start, and our team can help review your trial setup if you send us your pilot goals."
+  },
+  {
+    "id": "general_inquiry_13",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Do you have mobile apps?\n\nHi,\n\nDo agents need to use desktop Gmail, or can they manage assigned emails from mobile?",
+    "expected_reply": "Hi Nadia,\n\nAgents can use CollabMail on desktop with Gmail, and mobile access is available through the CollabMail mobile apps for common workflows such as viewing assigned conversations, replying, adding notes, and receiving notifications.\n\nFor heavier triage, template management, analytics, and admin settings, desktop is still the best experience. Mobile is most useful for staying responsive while away from a desk.\n\nIf mobile workflow is critical for your team, we recommend testing it during the trial with a few real assigned conversations."
+  },
+  {
+    "id": "general_inquiry_14",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Can customers see internal notes?\n\nHello,\n\nThis may be basic, but can customers ever see internal notes? We want to use notes for escalation details inside support@.",
+    "expected_reply": "Hi Theo,\n\nCustomers cannot see CollabMail internal notes. Notes are visible only to teammates with access to the shared inbox conversation, and they are separate from email replies.\n\nInternal notes are a good place for escalation context, handoff details, and manager review. Agents should still be careful to type in the note composer rather than the email reply composer before posting sensitive internal context.\n\nIf you are onboarding new agents, we recommend showing them the visual difference between internal notes and customer replies during training."
+  },
+  {
+    "id": "general_inquiry_15",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Comparing Pro and Business\n\nHi,\n\nWe are trying to choose between Pro and Business. The main thing we care about is analytics for team performance and response times. Which plan should we pick?",
+    "expected_reply": "Hi Julia,\n\nIf analytics for team performance and response times is a main priority, Business is likely the better fit. Pro includes basic shared inbox collaboration, assignments, templates, and lighter reporting, while Business includes deeper analytics for managers and larger teams.\n\nFor example, Business is better if you need response-time trends, team workload visibility, and more detailed reporting across shared inboxes. Pro can work well if you only need basic volume and collaboration features.\n\nYou can compare plans at collabmail.com/pricing, or start on Pro and upgrade later if the analytics depth is not enough."
+  },
+  {
+    "id": "general_inquiry_16",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Email forwarding or direct Gmail access?\n\nHi,\n\nDoes CollabMail require us to forward emails somewhere, or does it work directly with our existing Gmail inboxes?",
+    "expected_reply": "Hi Ken,\n\nCollabMail works directly with your existing Gmail inboxes after authorized Google connection. You do not need to forward support@ or sales@ emails to a separate CollabMail address.\n\nOnce connected, CollabMail adds collaboration features such as assignments, internal notes, templates, and analytics around the Gmail conversations your team already uses.\n\nDuring setup, an admin connects the shared mailbox or delegated inbox, invites teammates, and configures rules. Your customers can continue emailing the same addresses they use today."
+  },
+  {
+    "id": "general_inquiry_17",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Training materials\n\nHello,\n\nDo you have training materials for agents? We are rolling CollabMail out to 40 customer support reps next month.",
+    "expected_reply": "Hi Monica,\n\nYes, we provide training materials for agents and admins, including quick-start guides, short videos, and workflow checklists for shared inboxes.\n\nFor 40 support reps, we recommend one admin setup session, one agent training session focused on assignments, notes, templates, and collision detection, and a follow-up after the first week to review analytics and workflow questions.\n\nSend us your rollout date and the shared inboxes involved, and we can point you to the right materials and help schedule training if your plan includes it."
+  },
+  {
+    "id": "general_inquiry_18",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Can we use aliases?\n\nHi,\n\nOur team replies from help@ but the actual Gmail account is support@. Can CollabMail handle aliases and keep assignments together?",
+    "expected_reply": "Hi Ravi,\n\nCollabMail can work with Gmail aliases as long as the alias is configured correctly in Google Workspace and the connected mailbox has permission to send from that address.\n\nAssignments and internal collaboration stay tied to the conversation in the shared inbox. The key setup step is making sure help@ is recognized as a valid sending alias for support@, so replies use the customer-facing address you expect.\n\nDuring setup, test a few replies from help@ and confirm the messages appear correctly in both Gmail and the CollabMail conversation timeline."
+  },
+  {
+    "id": "general_inquiry_19",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Uptime SLA\n\nHello,\n\nDo you offer an uptime SLA for enterprise customers? We need this for procurement before we can approve CollabMail.",
+    "expected_reply": "Hi Hannah,\n\nEnterprise agreements can include uptime and support commitments depending on the contract terms and support tier. We can provide the current SLA language, support response targets, and status page information during procurement review.\n\nPlease send your procurement requirements to sales@collabmail.com or book time at collabmail.com/enterprise-demo. If you have a vendor questionnaire, attach it and we'll complete the relevant sections.\n\nFor technical review, we can also share details about incident communication, monitoring, and escalation paths."
+  },
+  {
+    "id": "general_inquiry_20",
+    "category": "general_inquiry",
+    "incoming_email": "Subject: Can CollabMail help reduce duplicate replies?\n\nHi,\n\nOur biggest problem is two teammates answering the same customer at the same time. Does CollabMail prevent that?",
+    "expected_reply": "Hi Aaron,\n\nYes, CollabMail is designed to reduce duplicate replies in shared inboxes. Assignments make ownership clear, and collision detection shows when another teammate is viewing or replying to the same conversation.\n\nTeams usually pair collision detection with simple rules: every new conversation gets assigned, agents work from their assigned queue, and internal notes are used for handoffs instead of forwarding. Email templates also help keep replies consistent.\n\nIf duplicate replies are your main pain point, you should be able to validate that quickly in a trial with your real support@ inbox."
+  }
+]

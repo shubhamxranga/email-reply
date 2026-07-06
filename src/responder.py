@@ -24,7 +24,7 @@ class EmailResponder:
                 "Get a free key at https://aistudio.google.com/apikey"
             )
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel("gemini-2.0-flash")
+        self.model = genai.GenerativeModel("gemini-2.5-flash")
         self.retriever = retriever
 
     def generate_reply(self, incoming_email, top_k=3):

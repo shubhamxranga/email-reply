@@ -40,7 +40,7 @@ class EmailEvaluator:
                 "Set GEMINI_API_KEY or GOOGLE_API_KEY environment variable."
             )
         genai.configure(api_key=api_key)
-        self.judge_model = genai.GenerativeModel("gemini-2.0-flash")
+        self.judge_model = genai.GenerativeModel("gemini-2.5-flash")
         self.rouge = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
         self.retriever = retriever
 

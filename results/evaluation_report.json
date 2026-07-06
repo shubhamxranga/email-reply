@@ -1,0 +1,739 @@
+{
+  "timestamp": "2026-07-06T12:54:46.056501",
+  "scoring_weights": {
+    "rouge_l": 0.15,
+    "semantic_similarity": 0.2,
+    "llm_judge": 0.65
+  },
+  "overall": {
+    "total_evaluated": 20,
+    "composite_score": {
+      "mean": 0.7184,
+      "median": 0.7174,
+      "std": 0.0596,
+      "min": 0.5842,
+      "max": 0.8598
+    },
+    "rouge_l": {
+      "mean": 0.2159,
+      "median": 0.2094
+    },
+    "semantic_similarity": {
+      "mean": 0.8106,
+      "median": 0.8286
+    },
+    "llm_judge_avg": {
+      "mean": 0.806,
+      "median": 0.8
+    }
+  },
+  "per_category": {
+    "account": {
+      "count": 4,
+      "mean_composite": 0.7373,
+      "median_composite": 0.731
+    },
+    "billing": {
+      "count": 4,
+      "mean_composite": 0.7019,
+      "median_composite": 0.696
+    },
+    "feature_request": {
+      "count": 4,
+      "mean_composite": 0.7101,
+      "median_composite": 0.6983
+    },
+    "general_inquiry": {
+      "count": 4,
+      "mean_composite": 0.7512,
+      "median_composite": 0.7419
+    },
+    "technical": {
+      "count": 4,
+      "mean_composite": 0.6915,
+      "median_composite": 0.7127
+    }
+  },
+  "per_response": [
+    {
+      "id": "account_08",
+      "category": "account",
+      "incoming_email_preview": "Subject: Change role from manager to agent\n\nHi,\n\nCan you change rachel@orbitline.com from manager to agent? She should s...",
+      "generated_reply_preview": "Hi there,\n\nHappy to help with changing Rachel's role.\n\nAn admin on your CollabMail workspace can adjust user roles from ...",
+      "scores": {
+        "rouge_l": 0.3122,
+        "semantic_similarity": 0.8835,
+        "llm_judge": {
+          "relevance": {
+            "score": 5,
+            "justification": "The reply directly addresses all specific points from the customer: how to change the role, access to support@, and not seeing team analytics."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "While covering the explicit requests, it misses anticipating the implicit 'Can *you* change it?' by not offering an alternative path if the customer isn't an admin, unlike the reference reply."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is consistently professional, helpful, and friendly throughout the reply, starting with 'Happy to help' and ending with an offer for further assistance."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The information provided is factually consistent with the reference and plausible for role changes and permissions. The steps are a reasonable and accurate expansion of the instructions."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear, numbered steps and the exact URL for an admin to take action. However, it lacks guidance for the scenario where the customer themselves is not an admin."
+          },
+          "average_score": 0.84
+        },
+        "composite_score": 0.7695
+      }
+    },
+    {
+      "id": "account_09",
+      "category": "account",
+      "incoming_email_preview": "Subject: Onboard HR department\n\nHi CollabMail,\n\nOur HR team wants to start using people@company.com for candidate and em...",
+      "generated_reply_preview": "Hi there,\n\nThat's a great step to onboard your HR team with a dedicated inbox! You can definitely set up `people@company...",
+      "scores": {
+        "rouge_l": 0.1903,
+        "semantic_similarity": 0.8292,
+        "llm_judge": {
+          "relevance": {
+            "score": 5,
+            "justification": "The reply directly and fully addresses the customer's question about onboarding a new department and keeping emails separate."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "It covers the main steps but misses a few specifics mentioned in the reference, such as connecting the Gmail mailbox explicitly, testing the setup, providing a direct link to inbox creation, and the option to restrict analytics access."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is professional, encouraging ('That's a great step!'), and helpful, which is appropriate for the customer's query."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The information provided is accurate and consistent with the general process outlined in the reference reply, though it lacks some of the specific actionable details (like a URL) found in the reference."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear, numbered steps. However, it could be more actionable by including the specific URL for inbox creation and explicitly mentioning connecting the Gmail mailbox as a distinct step, as the reference did."
+          },
+          "average_score": 0.84
+        },
+        "composite_score": 0.7404
+      }
+    },
+    {
+      "id": "account_01",
+      "category": "account",
+      "incoming_email_preview": "Subject: Password reset not arriving\n\nHi,\n\nI requested a password reset twice but never received the email. I checked sp...",
+      "generated_reply_preview": "Hi Kara,\n\nSorry to hear you're having trouble receiving your password reset emails, especially after checking your spam ...",
+      "scores": {
+        "rouge_l": 0.2137,
+        "semantic_similarity": 0.8481,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses the customer's issue of not receiving password reset emails and offers relevant troubleshooting steps related to email delivery."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "The reply misses the crucial information about Google SSO from the reference reply, which explains a common reason for not receiving password resets and offers an alternative login method. This is a significant omission."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is excellent, showing empathy and acknowledging the customer's frustration while remaining professional and helpful."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The individual suggestions are largely accurate and plausible. However, the omission of the Google SSO context (present in the reference) and the minor difference in the 'no-reply' email address slightly reduce its consistency with the reference's comprehensive solution."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear and actionable steps. However, the customer might not immediately know their 'CollabMail workspace name,' potentially requiring a follow-up, and a direct reset link (like in the reference) would enhance immediate action."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.7217
+      }
+    },
+    {
+      "id": "account_04",
+      "category": "account",
+      "incoming_email_preview": "Subject: Transfer account ownership\n\nHi,\n\nOur workspace owner, Priya Shah, is leaving the company. Please transfer Colla...",
+      "generated_reply_preview": "Hi Alan,\n\nI understand you need to transfer CollabMail workspace ownership from Priya Shah to your account, especially w...",
+      "scores": {
+        "rouge_l": 0.2133,
+        "semantic_similarity": 0.8279,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses the customer's request to transfer CollabMail ownership."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "The reply misses the crucial scenario where the current owner (Priya) might no longer have access to perform the self-service transfer, which the reference reply addresses."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is professional, clear, and helpful, appropriate for a straightforward request."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "There is a minor discrepancy in the URL path provided (`/settings/team` vs. reference's `/settings/workspace`), and some added details are not confirmed by the reference."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear, concrete steps for the self-service option, but lacks alternative instructions if that path is not possible, potentially requiring further customer contact."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.7176
+      }
+    },
+    {
+      "id": "billing_14",
+      "category": "billing",
+      "incoming_email_preview": "Subject: Urgent: account locked over failed invoice\n\nOur account says billing overdue and my team can't access the analy...",
+      "generated_reply_preview": "Hi there,\n\nSorry to hear your team is experiencing a service interruption and cannot access your CollabMail dashboard du...",
+      "scores": {
+        "rouge_l": 0.2388,
+        "semantic_similarity": 0.7953,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply addresses the core problem of being locked out due to an overdue invoice and provides a path to unlock. However, it misses the customer's specific request to be 'unlocked while we update the payment method' by not offering a temporary solution."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "The reply addresses most issues but fails to provide a temporary unlock or extension while the customer updates their payment method, which was a key part of the original request."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is empathetic ('Sorry to hear...', 'We understand...') and professional, acknowledging the customer's situation and providing information clearly."
+          },
+          "accuracy": {
+            "score": 3,
+            "justification": "The generated reply states 'account access is automatically suspended,' which contradicts the reference reply's 'Your account is not fully locked.' It also doesn't offer the temporary grace period the reference provides, indicating an inconsistency in policy or immediate solutions."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear instructions, a direct link to update payment, specifies user roles, and offers a fallback if payment has already been updated. However, it lacks actionability on the customer's request for immediate, temporary access."
+          },
+          "average_score": 0.76
+        },
+        "composite_score": 0.6889
+      }
+    },
+    {
+      "id": "billing_20",
+      "category": "billing",
+      "incoming_email_preview": "Subject: Upgrade only analytics users?\n\nHi,\n\nWe have 55 agents using shared inboxes, but only 5 managers need the advanc...",
+      "generated_reply_preview": "Hi there,\n\nThanks for asking about upgrading specific users for advanced analytics. I understand you're looking to provi...",
+      "scores": {
+        "rouge_l": 0.195,
+        "semantic_similarity": 0.7821,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "Directly addresses the customer's core question about upgrading specific users versus everyone."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "Answers the primary question but omits critical pricing information for the full upgrade and does not clearly outline the Enterprise alternative with specific next steps, unlike the reference."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "Professional, empathetic, acknowledges the customer's concern for cost efficiency, and maintains a helpful and approachable tone."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "All factual statements about CollabMail's plan application and lack of mixed-plan setup are accurate and consistent with the reference."
+          },
+          "actionability": {
+            "score": 3,
+            "justification": "Offers a general invitation to reply for more discussion but lacks concrete pricing details or direct, actionable next steps for exploring an Enterprise solution, requiring the customer to initiate further contact."
+          },
+          "average_score": 0.76
+        },
+        "composite_score": 0.6797
+      }
+    },
+    {
+      "id": "billing_07",
+      "category": "billing",
+      "incoming_email_preview": "Subject: We were charged for inactive users\n\nHi support,\n\nOur June invoice includes 33 users, but only 29 people are act...",
+      "generated_reply_preview": "Hi there,\n\nThanks for reaching out about your June invoice. I understand your concern about being billed for users who a...",
+      "scores": {
+        "rouge_l": 0.2062,
+        "semantic_similarity": 0.7608,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses why the customer was billed for inactive users and acknowledges the specific situation with the four employees."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "It explains the billing and offers a path for prevention and resolution, but the resolution for the current invoice is an offer to 'submit a request to review' rather than a confirmed action/credit, making it less complete than the reference."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is professional, empathetic ('I understand your concern'), and helpful, striking an appropriate balance for the customer's query."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The billing policy explanation aligns with the reference. The suggested future prevention method (manual removal) is accurate, though the reference suggests a more automated one. The offer to review for a refund is a plausible process."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear instructions for preventing future issues. For the current invoice, it offers a clear next step for the customer ('Please confirm if you would like me to proceed'), though it requires customer input to initiate the review."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.7031
+      }
+    },
+    {
+      "id": "billing_18",
+      "category": "billing",
+      "incoming_email_preview": "Subject: Can coupon apply retroactively?\n\nHi CollabMail,\n\nOur sales rep gave us code STARTUP20, but I forgot to enter it...",
+      "generated_reply_preview": "Hi there,\n\nThanks for reaching out! I understand that it's easy to forget to apply a coupon code, especially when you're...",
+      "scores": {
+        "rouge_l": 0.2242,
+        "semantic_similarity": 0.9111,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "Directly answers the customer's main question about applying the discount retroactively and calculates the correct amount."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "The reply addresses the first month's discount but misses that the STARTUP20 coupon applies for the first 3 months, which is crucial context provided in the reference."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is empathetic, positive, and reassuring, using phrases like 'Good news' and acknowledging the customer's situation."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The core facts (discount percentage, calculation, retroactivity) are correct. However, the requested next step (workspace owner confirmation) differs from the procedure suggested in the reference (sales rep email)."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "Provides clear instructions for the customer to take the next step by having the workspace owner confirm, and explains what will happen afterward."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.7359
+      }
+    },
+    {
+      "id": "feature_request_09",
+      "category": "feature_request",
+      "incoming_email_preview": "Subject: API access to assignment rules\n\nHi,\n\nCan you expose assignment rules through the API? We manage rules for 20 re...",
+      "generated_reply_preview": "Hi,\n\nThanks for reaching out with your request for API access to assignment rules. I can certainly understand how managi...",
+      "scores": {
+        "rouge_l": 0.2694,
+        "semantic_similarity": 0.8468,
+        "llm_judge": {
+          "relevance": {
+            "score": 5,
+            "justification": "The reply directly addresses the customer's specific question about API access and acknowledges their detailed use case for version control and managing multiple inboxes."
+          },
+          "completeness": {
+            "score": 5,
+            "justification": "The reply clearly answers the customer's primary question, confirms the internal action taken, and proactively seeks further details, leaving no part of the original request unaddressed."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is professional, empathetic in acknowledging the customer's challenge, and consistently helpful throughout the message."
+          },
+          "accuracy": {
+            "score": 5,
+            "justification": "The information provided is factually consistent with the reference reply, correctly stating the current API limitations and the action taken, without fabricating any details."
+          },
+          "actionability": {
+            "score": 5,
+            "justification": "The reply clearly outlines the current situation, confirms a concrete next step taken by the agent (logging the feature request), and provides a clear request for further input from the customer."
+          },
+          "average_score": 1.0
+        },
+        "composite_score": 0.8598
+      }
+    },
+    {
+      "id": "feature_request_19",
+      "category": "feature_request",
+      "incoming_email_preview": "Subject: Bulk edit email templates\n\nHi support,\n\nWe rebranded and need to update the footer across 64 email templates. C...",
+      "generated_reply_preview": "Hi there,\n\nI understand that updating the footer across 64 email templates due to a rebrand can be quite a task, and it'...",
+      "scores": {
+        "rouge_l": 0.1812,
+        "semantic_similarity": 0.8655,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses the customer's request for bulk editing and shared snippets, confirming absence of the feature."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "The reply misses a critical alternative solution (backend-assisted update) that a skilled human agent would provide, leaving the customer with only the manual option."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is empathetic and professional, acknowledging the customer's challenge and appreciating their feedback despite delivering negative news."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The information provided (absence of features, manual steps) is accurate. However, it's incomplete by omitting a potential support-assisted solution mentioned in the reference."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "It provides clear steps for manual updates, but lacks actionable steps for a potentially better, support-assisted solution, which limits its overall actionability."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.7203
+      }
+    },
+    {
+      "id": "feature_request_12",
+      "category": "feature_request",
+      "incoming_email_preview": "Subject: Custom email template variables\n\nHi,\n\nWe want template variables for customer plan, renewal date, and CSM name....",
+      "generated_reply_preview": "Hi there,\n\nI understand you're looking to include more specific details like customer plan, renewal date, and CSM name i...",
+      "scores": {
+        "rouge_l": 0.1818,
+        "semantic_similarity": 0.8349,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly acknowledges the customer's request for specific custom template variables like plan, renewal date, and CSM name."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "It attempts to offer a solution but fails to address the actual product limitation (lack of direct custom field support) mentioned in the reference, thus not fully addressing the customer's real problem."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is professional, empathetic by acknowledging the request, and consistently helpful throughout the reply."
+          },
+          "accuracy": {
+            "score": 1,
+            "justification": "The reply factually misrepresents the product's capabilities by describing a custom field feature that does not exist according to the reference reply. This is a critical error."
+          },
+          "actionability": {
+            "score": 2,
+            "justification": "While steps are clearly outlined with a help center link, they are based on an inaccurate premise. Following these steps will lead the customer to a dead end and frustration, not a resolution."
+          },
+          "average_score": 0.6
+        },
+        "composite_score": 0.5842
+      }
+    },
+    {
+      "id": "feature_request_04",
+      "category": "feature_request",
+      "incoming_email_preview": "Subject: Feature idea: AI template suggestions\n\nHi team,\n\nIt would be great if CollabMail suggested an email template ba...",
+      "generated_reply_preview": "Hi team,\n\nThanks for sharing this idea! We completely understand how valuable it would be to have smarter ways to quickl...",
+      "scores": {
+        "rouge_l": 0.187,
+        "semantic_similarity": 0.6415,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses the customer's feature idea and the underlying problem of agents wasting time searching through many templates."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "The reply addresses the core idea and problem, confirms logging the request, and mentions current features. However, unlike the reference, it doesn't proactively ask for additional customer input to enrich the feature request for the product team."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is highly empathetic, appreciative, and professional. It validates the customer's idea and demonstrates understanding of their pain point."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The information provided is consistent with the reference reply regarding the existence of the idea, current features, and the lack of AI suggestions. It does not invent any features or policies."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply confirms that the request has been logged (a clear next step for the idea) and provides a concrete, actionable suggestion for the customer to improve their current template usage through naming conventions."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.6763
+      }
+    },
+    {
+      "id": "general_inquiry_10",
+      "category": "general_inquiry",
+      "incoming_email_preview": "Subject: Onboarding help for mid-market team\n\nHi,\n\nWe have 75 users across support, sales, and operations. Do you provid...",
+      "generated_reply_preview": "Hi,\n\nYes, absolutely, we provide comprehensive onboarding support to help you get started successfully, especially for a...",
+      "scores": {
+        "rouge_l": 0.2126,
+        "semantic_similarity": 0.8346,
+        "llm_judge": {
+          "relevance": {
+            "score": 5,
+            "justification": "The reply directly and explicitly answers the customer's two main questions about onboarding help and self-setup, and acknowledges the team size and departments mentioned."
+          },
+          "completeness": {
+            "score": 4,
+            "justification": "The reply thoroughly answers the customer's direct questions and provides good detail on the onboarding process. It omits the nuance of self-serve options mentioned in the reference, but this wasn't a direct customer query."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is highly professional, positive, and reassuring, using phrases like 'Yes, absolutely' and 'dedicated Onboarding Manager' to instill confidence and convey helpfulness."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The information aligns well with the reference reply regarding onboarding scope and process. It adds plausible details (e.g., dedicated Onboarding Manager, agent training) that enhance the offering without contradicting core facts. It omits the self-serve detail, which is an omission, not an inaccuracy."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear, concrete next steps by asking for specific information (go-live date, shared inboxes) to initiate a discovery call. It's actionable, though slightly less direct than the reference which offered a booking link."
+          },
+          "average_score": 0.88
+        },
+        "composite_score": 0.7708
+      }
+    },
+    {
+      "id": "general_inquiry_08",
+      "category": "general_inquiry",
+      "incoming_email_preview": "Subject: Can agencies use CollabMail for multiple clients?\n\nHi,\n\nWe are an agency managing customer support for five eco...",
+      "generated_reply_preview": "Hi there,\n\nIt's great to hear you're looking to use CollabMail to manage support for your ecommerce clients! We often wo...",
+      "scores": {
+        "rouge_l": 0.1614,
+        "semantic_similarity": 0.7597,
+        "llm_judge": {
+          "relevance": {
+            "score": 5,
+            "justification": "The reply directly and thoroughly addresses the customer's questions about separating shared inboxes, templates, and analytics for multiple clients."
+          },
+          "completeness": {
+            "score": 5,
+            "justification": "All questions regarding separation of inboxes, templates, and analytics are addressed with detailed explanations. It also proactively covers agent access and billing options, which are highly relevant for an agency."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is welcoming, professional, and helpful. It acknowledges the customer's agency context and provides a reassuring and clear explanation."
+          },
+          "accuracy": {
+            "score": 5,
+            "justification": "The information provided is consistent with the reference reply's primary recommendation (separate workspaces) and appears factually correct for a SaaS platform supporting agencies."
+          },
+          "actionability": {
+            "score": 5,
+            "justification": "The reply provides clear, concrete next steps by recommending setting up a trial workspace and inviting a discussion for further onboarding and billing needs."
+          },
+          "average_score": 1.0
+        },
+        "composite_score": 0.8261
+      }
+    },
+    {
+      "id": "general_inquiry_02",
+      "category": "general_inquiry",
+      "incoming_email_preview": "Subject: Migration from Hiver\n\nHello,\n\nWe are considering moving from Hiver to CollabMail for 35 support and success use...",
+      "generated_reply_preview": "Hello,\n\nThanks for reaching out and considering CollabMail for your team's migration from Hiver! We understand that movi...",
+      "scores": {
+        "rouge_l": 0.1834,
+        "semantic_similarity": 0.8274,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses all three questions about migrating shared inbox history, tags, and templates with specific details."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "It answers the direct questions but doesn't offer the same level of proactive information or immediate next steps (e.g., asking for specific data to provide a checklist) as the reference reply, deferring more to a call."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is professional, empathetic ('we understand careful planning'), and helpful, making the customer feel supported."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The information about history and tags aligns well. The description of template migration via copy-paste is accurate but might be a simplification compared to the reference's 'importing or rebuilding' for a 35-user team."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "It provides clear next steps: scheduling a call with a migration specialist and how to do so (reply or visit a link). It's actionable, but a bit less direct than the reference which asked for specific data to provide a concrete deliverable."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.713
+      }
+    },
+    {
+      "id": "general_inquiry_03",
+      "category": "general_inquiry",
+      "incoming_email_preview": "Subject: Do you support Gmail only?\n\nHi CollabMail,\n\nDoes your product work with Outlook or only Gmail? Our support team...",
+      "generated_reply_preview": "Hi there,\n\nThanks for reaching out!\n\nCollabMail is currently designed to work exclusively with Gmail and Google Workspac...",
+      "scores": {
+        "rouge_l": 0.2054,
+        "semantic_similarity": 0.8497,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses both the compatibility with Outlook/Gmail and the specific use cases for the support (Gmail) and sales (Microsoft 365) teams."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "All explicit questions are answered, but it lacks the proactive, specific solution path offered by the reference reply for their split team scenario."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is professional, friendly, and empathetic, acknowledging the customer's specific situation ('We understand that different teams...')."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "All information regarding product compatibility (Gmail only), features, and implications for the customer's teams is factually consistent with the reference reply."
+          },
+          "actionability": {
+            "score": 3,
+            "justification": "The reply provides a generic 'ask more questions' call to action rather than a concrete, proactive next step to address the customer's specific multi-platform situation, as seen in the reference."
+          },
+          "average_score": 0.76
+        },
+        "composite_score": 0.6948
+      }
+    },
+    {
+      "id": "technical_08",
+      "category": "technical",
+      "incoming_email_preview": "Subject: Analytics dashboard blank\n\nHi support,\n\nThe analytics dashboard loads as a blank white page for everyone in our...",
+      "generated_reply_preview": "Hello,\n\nI understand how critical it is to access your analytics, especially with an exec meeting coming up in 40 minute...",
+      "scores": {
+        "rouge_l": 0.2295,
+        "semantic_similarity": 0.8428,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses both the urgent need for the report and the blank dashboard issue."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "It addresses the main issues but lacks the proactive 'checking logs' step seen in the reference, and doesn't explicitly offer to generate the report if the export link fails, unlike the reference."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is empathetic, professional, and acknowledges the urgency of the customer's situation well."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The information provided, including troubleshooting steps and the export link, is accurate and consistent with standard practices and the reference reply."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear, numbered steps for troubleshooting and specific instructions for getting the report and what to do if the dashboard issue persists."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.723
+      }
+    },
+    {
+      "id": "technical_18",
+      "category": "technical",
+      "incoming_email_preview": "Subject: Internal notes disappearing?\n\nHi,\n\nOne agent says her internal note disappeared from a customer conversation. W...",
+      "generated_reply_preview": "Hi there,\n\nI understand how concerning it is when internal notes, which are so critical for handoffs, appear to go missi...",
+      "scores": {
+        "rouge_l": 0.23,
+        "semantic_similarity": 0.8133,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "Directly answers the primary question about automatic deletion and acknowledges the stated concern, but it misses the specific mechanism of user deletion with permissions that the reference highlights as a non-automatic reason."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "Answers the main question but is incomplete in its explanation of how notes might disappear (it misses user-initiated deletion with permissions) and does not provide self-service investigation steps (activity log, audit log) that the reference offers."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is empathetic, professional, and reassuring, effectively validating the customer's concern about critical notes going missing."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The information provided is factually correct (notes aren't auto-deleted), and the troubleshooting suggestions are plausible. However, it omits the accurate and crucial detail that notes can be deleted by users with permissions and that these actions are logged, which the reference includes."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "It provides clear, specific information for the customer to gather and provide to support for investigation. However, it lacks actionable self-service steps for the customer to investigate on their own, which the reference reply provides."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.7172
+      }
+    },
+    {
+      "id": "technical_06",
+      "category": "technical",
+      "incoming_email_preview": "Subject: Mobile app crashes on templates\n\nHello,\n\nThe iOS app crashes every time I open email templates from a conversat...",
+      "generated_reply_preview": "Hi there,\n\nThanks for letting us know about the trouble you're experiencing with the iOS app crashing when opening email...",
+      "scores": {
+        "rouge_l": 0.1927,
+        "semantic_similarity": 0.7345,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses the app crashing issue and acknowledges the details provided. However, it misses the specific known bug and direct fix (update to 4.7.3) mentioned in the reference, instead offering generic troubleshooting."
+          },
+          "completeness": {
+            "score": 2,
+            "justification": "The reply fails to include the crucial information from the reference about updating to app version 4.7.3, which contains the fix for the known bug. It suggests reinstalling the problematic version (4.7.2)."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is professional, empathetic ('I understand how frustrating it can be'), and appreciative. It clearly acknowledges the customer's issue and offers continued support."
+          },
+          "accuracy": {
+            "score": 2,
+            "justification": "The reply is inaccurate in its primary proposed solution. The reference states a known bug in 4.7.2 and a fix in 4.7.3; the generated reply suggests reinstalling 4.7.2, which will not resolve the underlying issue described in the reference."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear, step-by-step instructions for troubleshooting (close, delete/reinstall, log in) and clear next steps if the issue persists. The customer can act on these instructions without further clarification."
+          },
+          "average_score": 0.68
+        },
+        "composite_score": 0.6178
+      }
+    },
+    {
+      "id": "technical_20",
+      "category": "technical",
+      "incoming_email_preview": "Subject: Android push notifications not working\n\nHi team,\n\nMy Android app no longer sends push notifications for mention...",
+      "generated_reply_preview": "Hi there,\n\nI'm sorry to hear your Android push notifications for mentions have stopped working. Since email notification...",
+      "scores": {
+        "rouge_l": 0.2905,
+        "semantic_similarity": 0.7224,
+        "llm_judge": {
+          "relevance": {
+            "score": 4,
+            "justification": "The reply directly addresses the customer's issue of Android push notifications not working, using the provided context that email notifications still arrive."
+          },
+          "completeness": {
+            "score": 3,
+            "justification": "The reply misses some key troubleshooting steps present in the reference, such as signing out/in to refresh the push token, confirming the latest app version, and checking battery optimization settings."
+          },
+          "tone": {
+            "score": 5,
+            "justification": "The tone is professional, empathetic ('I'm sorry to hear'), and provides clear, polite instructions throughout the reply."
+          },
+          "accuracy": {
+            "score": 4,
+            "justification": "The information provided is generally accurate and logical for troubleshooting push notifications, although it suggests different primary steps (web settings, force stop/clear cache) than the reference for refreshing the token."
+          },
+          "actionability": {
+            "score": 4,
+            "justification": "The reply provides clear, numbered steps for the customer to follow, making it easy to act upon without needing further clarification."
+          },
+          "average_score": 0.8
+        },
+        "composite_score": 0.7081
+      }
+    }
+  ]
+}
