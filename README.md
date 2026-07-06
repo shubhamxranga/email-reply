@@ -113,20 +113,20 @@ $$\text{Composite} = 0.15 \times \text{ROUGE-L} + 0.20 \times \text{Semantic Sim
 
 ```
 hiver-email-ai/
-├── README.md                  # This file
-├── requirements.txt           # Python dependencies
-├── main.py                    # CLI entry point
+├── README.md                  
+├── requirements.txt          
+├── main.py                   
 ├── data/
-│   ├── generate_dataset.py    # Generates dataset using Gemini
-│   └── dataset.json           # 100 email-reply pairs
+│   ├── generate_dataset.py    
+│   └── dataset.json           
 ├── src/
-│   ├── embeddings.py          # Embedding & FAISS retrieval
-│   ├── responder.py           # RAG responder
-│   ├── evaluator.py           # Multi-metric evaluation
-│   └── reporter.py            # Console & JSON reports
+│   ├── embeddings.py         
+│   ├── responder.py           
+│   ├── evaluator.py           
+│   └── reporter.py            
 └── results/
-    ├── generated_responses.json   # Generated outputs (run-time)
-    └── evaluation_report.json     # Detailed evaluation scores (run-time)
+    ├── generated_responses.json   
+    └── evaluation_report.json     
 ```
 
 ---
@@ -134,3 +134,9 @@ hiver-email-ai/
 ## AI Usage Disclosure
 - **Gemini 2.5 Flash**: Handled synthetic dataset generation, email reply draft generation, and LLM-as-judge evaluation.
 - **Google Antigravity**: Served as the interactive coding assistant to write the code structure, handle setup, and debug pipeline issues.
+
+
+## Connect
+
+ X (Twitter): [@ShubhamRanga_](https://x.com/ShubhamRanga_)
+ LinkedIn: [Shubham Ranga](https://www.linkedin.com/in/shubham-ranga-arasthoo/)
