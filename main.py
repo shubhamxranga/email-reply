@@ -77,8 +77,8 @@ def cmd_generate_responses(args):
 
         print(f"    Reply: {generated[:80]}...")
 
-        # Rate limiting
-        time.sleep(0.5)
+        # Rate limiting — generous delay for free tier
+        time.sleep(3)
 
     os.makedirs("results", exist_ok=True)
     with open("results/generated_responses.json", "w") as f:
@@ -141,7 +141,7 @@ def cmd_evaluate(args):
         )
 
         # Rate limiting for LLM judge calls
-        time.sleep(0.5)
+        time.sleep(2)
 
     # Generate and display report
     report = reporter.format_results(results)
@@ -159,10 +159,19 @@ def cmd_run_all(args):
 
     start = time.time()
 
-    # Check dataset exists
+    # Check dataset exists and is not empty
     if not os.path.exists("data/dataset.json"):
-        print("\n  ⚠ No dataset found. Generating one first...")
-        cmd_generate_dataset(args)
+        print("\n  ✗ No dataset found at data/dataset.json")
+        print("  Run 'python main.py generate-dataset' first, or provide your own.")
+        sys.exit(1)
+
+    with open("data/dataset.json") as f:
+        ds = json.load(f)
+    if len(ds) < 5:
+        print(f"\n  ✗ Dataset too small ({len(ds)} emails). Need at least 5.")
+        print("  Run 'python main.py generate-dataset' or provide a larger dataset.")
+        sys.exit(1)
+    print(f"\n  ✓ Dataset loaded: {len(ds)} email pairs")
 
     print("\n--- Step 1/2: Generating Responses ---")
     cmd_generate_responses(args)

@@ -110,15 +110,15 @@ python main.py generate-dataset --per-category 5 # Faster: 5 emails per category
 
 ### What It Is
 
-50 synthetic customer support email-reply pairs, generated using Gemini, across 5 categories:
+100 synthetic customer support email-reply pairs, generated using Gemini, across 5 categories:
 
 | Category | Count | Examples |
 |---|---|---|
-| **Billing** | 10 | Refunds, unexpected charges, plan changes, invoice requests |
-| **Technical** | 10 | Bugs, sync failures, integration issues, login problems |
-| **Feature Request** | 10 | New features, workflow improvements, API access |
-| **Account** | 10 | Password resets, team changes, permissions, data export |
-| **General Inquiry** | 10 | Pricing, onboarding, migration, security questions |
+| **Billing** | 20 | Refunds, unexpected charges, plan changes, invoice requests |
+| **Technical** | 20 | Bugs, sync failures, integration issues, login problems |
+| **Feature Request** | 20 | New features, workflow improvements, API access |
+| **Account** | 20 | Password resets, team changes, permissions, data export |
+| **General Inquiry** | 20 | Pricing, onboarding, migration, security questions |
 
 ### Why Synthetic?
 

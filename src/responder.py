@@ -44,17 +44,25 @@ class EmailResponder:
         similar_emails = self.retriever.retrieve_similar(incoming_email, top_k=top_k)
         prompt = self._build_prompt(incoming_email, similar_emails)
 
-        try:
-            response = self.model.generate_content(prompt)
-            return response.text.strip()
-        except Exception as e:
-            # Retry once after a brief pause (rate limiting)
-            time.sleep(2)
+        max_retries = 4
+        for attempt in range(max_retries):
             try:
                 response = self.model.generate_content(prompt)
                 return response.text.strip()
-            except Exception as retry_error:
-                return f"[Error generating reply: {retry_error}]"
+            except Exception as e:
+                error_str = str(e)
+                # Exponential backoff, longer for rate limits
+                if "429" in error_str or "quota" in error_str.lower():
+                    wait = [5, 15, 30, 60][min(attempt, 3)]
+                    print(f"    ⏳ Rate limited, waiting {wait}s (attempt {attempt + 1}/{max_retries})...")
+                else:
+                    wait = [2, 5, 10, 20][min(attempt, 3)]
+                    print(f"    ⚠ API error, retrying in {wait}s: {error_str[:80]}")
+
+                if attempt < max_retries - 1:
+                    time.sleep(wait)
+                else:
+                    return f"[Error generating reply after {max_retries} attempts: {e}]"
 
     def _build_prompt(self, incoming_email, similar_emails):
         """Construct a few-shot prompt grounded in similar past interactions."""

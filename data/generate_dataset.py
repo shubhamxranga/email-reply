@@ -105,7 +105,7 @@ Output EXACTLY a JSON array (no markdown, no code blocks, no explanatory text):
 
 Generate exactly {emails_per_category} diverse exchanges."""
 
-        max_retries = 3
+        max_retries = 4
         for attempt in range(max_retries):
             try:
                 response = model.generate_content(prompt)
@@ -141,21 +141,28 @@ Generate exactly {emails_per_category} diverse exchanges."""
                 break
 
             except (json.JSONDecodeError, AssertionError, KeyError) as e:
+                wait = [3, 8, 15, 30][min(attempt, 3)]
                 print(f"    ✗ Attempt {attempt + 1} failed: {e}")
                 if attempt < max_retries - 1:
-                    time.sleep(2)
+                    time.sleep(wait)
                 else:
                     print(f"    ⚠ Skipping category {category} after {max_retries} failures")
 
             except Exception as e:
-                print(f"    ✗ API error on attempt {attempt + 1}: {e}")
+                error_str = str(e)
+                if "429" in error_str or "quota" in error_str.lower():
+                    wait = [10, 30, 60, 120][min(attempt, 3)]
+                    print(f"    ⏳ Rate limited, waiting {wait}s (attempt {attempt + 1}/{max_retries})...")
+                else:
+                    wait = [3, 8, 15, 30][min(attempt, 3)]
+                    print(f"    ✗ API error on attempt {attempt + 1}: {error_str[:100]}")
                 if attempt < max_retries - 1:
-                    time.sleep(3)
+                    time.sleep(wait)
                 else:
                     print(f"    ⚠ Skipping category {category} after {max_retries} failures")
 
-        # Rate limiting — be nice to the API
-        time.sleep(1)
+        # Rate limiting — generous pause between categories
+        time.sleep(5)
 
     # Save dataset
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

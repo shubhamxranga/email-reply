@@ -156,7 +156,7 @@ Dimensions to evaluate:
 Respond in EXACTLY this JSON format with no markdown formatting, no code blocks, no extra text:
 {{"relevance": {{"score": 4, "justification": "brief reason"}}, "completeness": {{"score": 3, "justification": "brief reason"}}, "tone": {{"score": 5, "justification": "brief reason"}}, "accuracy": {{"score": 4, "justification": "brief reason"}}, "actionability": {{"score": 4, "justification": "brief reason"}}}}"""
 
-        max_retries = 3
+        max_retries = 4
         for attempt in range(max_retries):
             try:
                 response = self.judge_model.generate_content(prompt)
@@ -194,14 +194,22 @@ Respond in EXACTLY this JSON format with no markdown formatting, no code blocks,
                 return scores
 
             except (json.JSONDecodeError, KeyError, ValueError) as e:
+                wait = [2, 5, 10, 20][min(attempt, 3)]
                 if attempt < max_retries - 1:
-                    time.sleep(1)
+                    print(f"      ⚠ Parse error, retrying in {wait}s: {e}")
+                    time.sleep(wait)
                     continue
-                # Fallback on final failure
                 return self._fallback_judge_result(str(e))
             except Exception as e:
-                time.sleep(2)
+                error_str = str(e)
+                if "429" in error_str or "quota" in error_str.lower():
+                    wait = [5, 15, 30, 60][min(attempt, 3)]
+                    print(f"      ⏳ Rate limited, waiting {wait}s...")
+                else:
+                    wait = [2, 5, 10, 20][min(attempt, 3)]
+                    print(f"      ⚠ API error, retrying in {wait}s...")
                 if attempt < max_retries - 1:
+                    time.sleep(wait)
                     continue
                 return self._fallback_judge_result(str(e))
 
